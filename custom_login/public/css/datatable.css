@@ -1,0 +1,228 @@
+/* ==========================================================
+   MORPHOSIS DATATABLE
+   ERPNext v16
+========================================================== */
+
+/* Wrapper */
+
+.datatable {
+
+    background: #080226 !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+/* Header */
+
+.dt-header {
+
+    background: #12063d !important;
+
+    border-bottom: 1px solid #32206d !important;
+
+}
+
+.dt-header * {
+
+    color: white !important;
+
+}
+
+/* Header Cell */
+
+.dt-cell--header {
+
+    background: #12063d !important;
+
+    color: white !important;
+
+    font-weight: 600;
+
+    border-right: 1px solid #32206d !important;
+
+}
+
+/* Rows */
+
+.dt-row {
+
+    background: #160844 !important;
+
+}
+
+.dt-row:nth-child(even) {
+
+    background: #1b0b52 !important;
+
+}
+
+.dt-row:hover {
+
+    background: #241062 !important;
+
+}
+
+/* Cells */
+
+.dt-cell {
+
+    color: white !important;
+
+    border-right: 1px solid #32206d !important;
+
+    border-bottom: 1px solid #32206d !important;
+
+}
+
+/* Tree */
+
+.dt-tree-node {
+
+    color: white !important;
+
+}
+
+/* Checkbox */
+
+.dt-checkbox {
+
+    accent-color: white;
+
+}
+
+/* Sort */
+
+.dt-sortable {
+
+    color: white !important;
+
+}
+
+/* Resize */
+
+.dt-resize-handle {
+
+    background: #5642a5 !important;
+
+}
+
+/* Filter */
+
+.dt-filter {
+
+    background: #12063d !important;
+
+}
+
+.dt-filter input {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.dt-filter input::placeholder {
+
+    color: #d0d0e5 !important;
+
+}
+
+/* Footer */
+
+.dt-footer {
+
+    background: #12063d !important;
+
+    color: white !important;
+
+    border-top: 1px solid #32206d !important;
+
+}
+
+/* Pagination */
+
+.dt-pagination {
+
+    background: #12063d !important;
+
+}
+
+.dt-pagination button {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 8px;
+
+}
+
+.dt-pagination button:hover {
+
+    background: #241062 !important;
+
+}
+
+/* Selected Row */
+
+.dt-row.dt-row--highlight {
+
+    background: #2d1b7b !important;
+
+}
+
+/* Active Cell */
+
+.dt-cell--focus {
+
+    outline: 2px solid white !important;
+
+}
+
+/* Links */
+
+.datatable a {
+
+    color: white !important;
+
+}
+
+.datatable a:hover {
+
+    color: #cfc8ff !important;
+
+}
+
+/* Icons */
+
+.datatable svg {
+
+    stroke: white !important;
+
+}
+
+/* Scroll */
+
+.datatable ::-webkit-scrollbar {
+
+    width: 10px;
+
+    height: 10px;
+
+}
+
+.datatable ::-webkit-scrollbar-thumb {
+
+    background: #5642a5;
+
+    border-radius: 20px;
+
+}

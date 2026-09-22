@@ -1,0 +1,358 @@
+/* ==========================================================
+   MORPHOSIS MISC COMPONENTS
+   Brand : #080226
+========================================================== */
+
+/* =====================================================
+   Page
+===================================================== */
+
+.page-head,
+.page-title,
+.page-head-content {
+
+    background: #080226 !important;
+    color: white !important;
+
+}
+
+.page-title * {
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Breadcrumb
+===================================================== */
+
+.breadcrumb {
+
+    background: transparent !important;
+
+}
+
+.breadcrumb-item,
+.breadcrumb-item a {
+
+    color: white !important;
+
+}
+
+.breadcrumb-item.active {
+
+    color: #d7d7ea !important;
+
+}
+
+/* =====================================================
+   Tabs
+===================================================== */
+
+.nav-tabs {
+
+    border-bottom: 1px solid #32206d !important;
+
+}
+
+.nav-tabs .nav-link {
+
+    color: #d6d6e8 !important;
+
+}
+
+.nav-tabs .nav-link:hover {
+
+    color: white !important;
+
+}
+
+.nav-tabs .nav-link.active {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+/* =====================================================
+   Pills
+===================================================== */
+
+.nav-pills .nav-link {
+
+    color: white !important;
+
+}
+
+.nav-pills .nav-link.active {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+/* =====================================================
+   Dropdown
+===================================================== */
+
+.dropdown-menu {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 14px;
+
+}
+
+.dropdown-item {
+
+    color: white !important;
+
+}
+
+.dropdown-item:hover {
+
+    background: #241062 !important;
+
+}
+
+/* =====================================================
+   Tooltip
+===================================================== */
+
+.tooltip-inner {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+}
+
+.bs-tooltip-top .tooltip-arrow::before {
+
+    border-top-color: #160844 !important;
+
+}
+
+/* =====================================================
+   Popover
+===================================================== */
+
+.popover {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.popover-header {
+
+    background: #080226 !important;
+
+    color: white !important;
+
+}
+
+.popover-body {
+
+    background: #12063d !important;
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Cards
+===================================================== */
+
+.card {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 16px;
+
+}
+
+.card * {
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Badge
+===================================================== */
+
+.badge {
+
+    background: #5642a5 !important;
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Avatar
+===================================================== */
+
+.avatar {
+
+    background: #32206d !important;
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Notification
+===================================================== */
+
+.notifications-list,
+.notification-list {
+
+    background: #12063d !important;
+
+}
+
+.notification-item {
+
+    border-bottom: 1px solid #32206d !important;
+
+}
+
+.notification-item:hover {
+
+    background: #241062 !important;
+
+}
+
+.notification-item * {
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Empty State
+===================================================== */
+
+.empty-state,
+.empty-state * {
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Tags
+===================================================== */
+
+.tag,
+.tag-pill {
+
+    background: #2d1b70 !important;
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Progress
+===================================================== */
+
+.progress {
+
+    background: #2c1b73 !important;
+
+}
+
+.progress-bar {
+
+    background: white !important;
+
+}
+
+/* =====================================================
+   Loader
+===================================================== */
+
+.spinner-border {
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Menu
+===================================================== */
+
+.menu-item {
+
+    color: white !important;
+
+}
+
+.menu-item:hover {
+
+    background: #241062 !important;
+
+}
+
+/* =====================================================
+   Timeline
+===================================================== */
+
+.timeline-item {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 14px;
+
+}
+
+.timeline-item * {
+
+    color: white !important;
+
+}
+
+/* =====================================================
+   Scrollbar
+===================================================== */
+
+::-webkit-scrollbar {
+
+    width: 10px;
+    height: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #0d042f;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #5642a5;
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #6d58d3;
+
+}

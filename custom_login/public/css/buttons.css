@@ -1,0 +1,336 @@
+/* ==========================================================
+   QUANTUMBERG BUTTON THEME
+   ERPNext v16
+   ========================================================== */
+
+
+/* ==========================================================
+   PRIMARY BUTTONS
+   Example:
+   Add Company
+   Add Task
+   Save
+   Submit
+   Create
+   ========================================================== */
+
+.btn-primary,
+.btn-primary-dark,
+button.btn-primary {
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89 0%,
+            #C8499A 100%
+        ) !important;
+
+    border:
+        none !important;
+
+    color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 4px 10px rgba(69, 61, 137, 0.18) !important;
+
+    border-radius:
+        8px !important;
+
+    transition:
+        all 0.2s ease !important;
+}
+
+
+/* ==========================================================
+   PRIMARY BUTTON HOVER
+   ========================================================== */
+
+.btn-primary:hover,
+.btn-primary-dark:hover,
+button.btn-primary:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            #3D367A 0%,
+            #B83C91 100%
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 6px 14px rgba(69, 61, 137, 0.25) !important;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==========================================================
+   PRIMARY BUTTON ACTIVE
+   ========================================================== */
+
+.btn-primary:active,
+.btn-primary-dark:active {
+
+    background:
+        #453D89 !important;
+
+    color:
+        #FFFFFF !important;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ==========================================================
+   SECONDARY BUTTONS
+   Example:
+   List View
+   Saved Filters
+   Refresh
+   Filter
+   ========================================================== */
+
+.btn-secondary,
+.btn-default,
+.btn-light,
+.btn-ghost {
+
+    background:
+        #F7F4FA !important;
+
+    border:
+        1px solid #E4D9EC !important;
+
+    color:
+        #453D89 !important;
+
+    border-radius:
+        8px !important;
+
+    transition:
+        all 0.2s ease !important;
+}
+
+
+/* ==========================================================
+   SECONDARY HOVER
+   ========================================================== */
+
+.btn-secondary:hover,
+.btn-default:hover,
+.btn-light:hover,
+.btn-ghost:hover {
+
+    background:
+        #EFE7F5 !important;
+
+    border-color:
+        #C8499A !important;
+
+    color:
+        #453D89 !important;
+}
+
+
+/* ==========================================================
+   DROPDOWN BUTTONS
+   ========================================================== */
+
+.btn-group .btn,
+.dropdown-toggle {
+
+    border-radius:
+        8px !important;
+}
+
+
+/* ==========================================================
+   FORM / ACTION BUTTONS
+   ========================================================== */
+
+.form-page .btn-primary,
+.page-form .btn-primary,
+.form-layout .btn-primary {
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89,
+            #C8499A
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+
+    border:
+        none !important;
+}
+
+
+/* ==========================================================
+   LIST VIEW ACTION BUTTONS
+   ========================================================== */
+
+.list-view .btn-primary,
+.list-view .btn-secondary,
+.list-view .btn-default {
+
+    border-radius:
+        8px !important;
+}
+
+
+/* ==========================================================
+   FILTER BUTTON
+   ========================================================== */
+
+.filter-button,
+.btn-filter {
+
+    background:
+        #F7F4FA !important;
+
+    border:
+        1px solid #E4D9EC !important;
+
+    color:
+        #453D89 !important;
+}
+
+
+.filter-button:hover,
+.btn-filter:hover {
+
+    background:
+        #EFE7F5 !important;
+
+    border-color:
+        #C8499A !important;
+
+    color:
+        #453D89 !important;
+}
+
+
+/* ==========================================================
+   PAGINATION
+   ========================================================== */
+
+.page-link {
+
+    color:
+        #453D89 !important;
+
+    border-color:
+        #E4D9EC !important;
+
+}
+
+
+.page-link:hover {
+
+    background:
+        #F1E8F6 !important;
+
+    color:
+        #C8499A !important;
+
+}
+
+
+/* ==========================================================
+   ACTIVE PAGINATION
+   ========================================================== */
+
+.page-item.active .page-link {
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89,
+            #C8499A
+        ) !important;
+
+    border-color:
+        transparent !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+
+/* ==========================================================
+   SMALL ACTION BUTTONS
+   ========================================================== */
+
+.btn-sm.btn-primary {
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89,
+            #C8499A
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+
+/* ==========================================================
+   ICON BUTTONS
+   Refresh / More / Close etc.
+   ========================================================== */
+
+.btn-icon,
+.btn.btn-icon {
+
+    color:
+        #453D89 !important;
+}
+
+
+.btn-icon:hover,
+.btn.btn-icon:hover {
+
+    background:
+        #F1E8F6 !important;
+
+    color:
+        #C8499A !important;
+}
+
+
+/* ==========================================================
+   CHECKBOX / SELECTED CONTROLS
+   ========================================================== */
+
+input[type="checkbox"]:checked {
+
+    accent-color:
+        #C8499A !important;
+}
+
+
+/* ==========================================================
+   LINKS USED AS BUTTONS
+   ========================================================== */
+
+a.btn-primary {
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89,
+            #C8499A
+        ) !important;
+
+    color:
+        #FFFFFF !important;
+
+}

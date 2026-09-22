@@ -1,0 +1,300 @@
+/* ==========================================================
+   QUANTUMBERG WORKSPACE MODULE SIDEBAR
+   ERPNext v16
+   ========================================================== */
+
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcuts {
+
+    position: fixed !important;
+
+    left: 0 !important;
+
+    top: 94px !important;
+
+    bottom: 0 !important;
+
+    width: 240px !important;
+
+    padding: 22px 12px !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #453D89 0%,
+            #51438F 45%,
+            #C8499A 100%
+        ) !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    gap: 6px !important;
+
+    overflow-y: auto !important;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.18) !important;
+
+    box-sizing: border-box !important;
+
+}
+
+
+/* ==========================================================
+   MODULE ITEM
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut {
+
+    width: 100% !important;
+
+    height: 48px !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    justify-content: flex-start !important;
+
+    gap: 13px !important;
+
+    padding: 7px 14px !important;
+
+    border-radius: 9px !important;
+
+    background:
+        transparent !important;
+
+    color:
+        #FFFFFF !important;
+
+    text-align: left !important;
+
+    box-sizing: border-box !important;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease !important;
+
+}
+
+
+/* ==========================================================
+   ICON
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut .shortcut-icon {
+
+    width: 34px !important;
+
+    height: 34px !important;
+
+    flex-shrink: 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    color:
+        #FFFFFF !important;
+
+}
+
+
+body:has(.workspace) .workspace-shortcut svg {
+
+    color:
+        #FFFFFF !important;
+
+    stroke:
+        #FFFFFF !important;
+
+}
+
+
+/* ==========================================================
+   TEXT
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut .shortcut-label {
+
+    color:
+        #FFFFFF !important;
+
+    font-size:
+        14px !important;
+
+    font-weight:
+        550 !important;
+
+    white-space:
+        nowrap !important;
+
+    overflow:
+        hidden !important;
+
+    text-overflow:
+        ellipsis !important;
+
+}
+
+
+/* ==========================================================
+   HOVER
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut:hover {
+
+    background:
+        rgba(255, 255, 255, 0.12) !important;
+
+    color:
+        #FFFFFF !important;
+
+}
+
+
+/* ==========================================================
+   ACTIVE
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut.active,
+body:has(.workspace) .workspace-shortcut.selected {
+
+    background:
+        linear-gradient(
+            90deg,
+            #673AB7 0%,
+            #B83C91 100%
+        ) !important;
+
+    border-left:
+        4px solid #FFFFFF !important;
+
+    padding-left:
+        10px !important;
+
+    box-shadow:
+        0 4px 12px rgba(69, 61, 137, 0.25) !important;
+
+}
+
+
+/* ==========================================================
+   ACTIVE TEXT
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut.active .shortcut-label,
+body:has(.workspace) .workspace-shortcut.selected .shortcut-label {
+
+    color:
+        #FFFFFF !important;
+
+    font-weight:
+        650 !important;
+
+}
+
+
+/* ==========================================================
+   ACTIVE ICON
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcut.active .shortcut-icon,
+body:has(.workspace) .workspace-shortcut.selected .shortcut-icon {
+
+    color:
+        #FFFFFF !important;
+
+}
+
+
+/* ==========================================================
+   MAIN WORKSPACE
+   ========================================================== */
+
+body:has(.workspace) .workspace {
+
+    margin-left:
+        240px !important;
+
+}
+
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+body:has(.workspace) .navbar {
+
+    margin-left:
+        0 !important;
+
+    background:
+        #FFFFFF !important;
+
+}
+
+
+/* ==========================================================
+   WORKSPACE
+   ========================================================== */
+
+body:has(.workspace) .workspace-page,
+body:has(.workspace) .workspace-body {
+
+    background:
+        #FFFFFF !important;
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+body:has(.workspace) .workspace-shortcuts::-webkit-scrollbar {
+
+    width:
+        6px;
+
+}
+
+
+body:has(.workspace) .workspace-shortcuts::-webkit-scrollbar-thumb {
+
+    background:
+        #C8499A !important;
+
+    border-radius:
+        20px;
+
+}
+
+
+body:has(.workspace) .workspace-shortcuts::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #D85BA8 !important;
+
+}
+
+
+body:has(.workspace) .workspace-shortcuts::-webkit-scrollbar-track {
+
+    background:
+        #453D89 !important;
+
+}

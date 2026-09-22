@@ -1,0 +1,91 @@
+/* ==========================================
+   QUANTUMBERG DESK ONLY
+========================================== */
+
+/* Desk background */
+
+body[data-route=""] .workspace-page,
+body[data-route=""] .workspace-body,
+body[data-route=""] .desktop-page,
+body[data-route=""] .layout-main-section,
+
+body[data-route="desk"] .workspace-page,
+body[data-route="desk"] .workspace-body,
+body[data-route="desk"] .desktop-page,
+body[data-route="desk"] .layout-main-section {
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89 0%,
+            #C8499A 100%
+        ) !important;
+
+}
+
+
+/* ==========================================
+   DESK SHORTCUTS
+========================================== */
+
+body[data-route=""] .shortcut-widget-box,
+body[data-route="desk"] .shortcut-widget-box {
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* ==========================================
+   DESK APP NAMES
+========================================== */
+
+body[data-route=""] .desktop-container .icon-title,
+body[data-route="desk"] .desktop-container .icon-title {
+
+    color: #FFFFFF !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* ==========================================
+   DESK SHORTCUT LABEL
+========================================== */
+
+body[data-route=""] .shortcut-label,
+body[data-route="desk"] .shortcut-label {
+
+    color: #FFFFFF !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* ==========================================
+   DESK ICONS
+========================================== */
+
+body[data-route=""] .desktop-container svg,
+body[data-route="desk"] .desktop-container svg {
+
+    color: #FFFFFF !important;
+
+}
+
+
+/* ==========================================
+   DESK SHORTCUT HOVER
+========================================== */
+
+body[data-route=""] .shortcut-widget-box:hover,
+body[data-route="desk"] .shortcut-widget-box:hover {
+
+    background: rgba(255, 255, 255, 0.10) !important;
+
+    border-radius: 14px !important;
+
+}

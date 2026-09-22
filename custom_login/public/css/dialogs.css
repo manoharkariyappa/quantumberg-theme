@@ -1,0 +1,259 @@
+/* ==========================================================
+   MORPHOSIS DIALOGS
+   Brand : #080226
+========================================================== */
+
+/* Dialog */
+
+.modal,
+.modal-dialog,
+.modal-content {
+
+    background: #12063d !important;
+
+    color: #ffffff !important;
+
+}
+
+/* Header */
+
+.modal-header {
+
+    background: #080226 !important;
+
+    border-bottom: 1px solid #32206d !important;
+
+}
+
+.modal-header * {
+
+    color: white !important;
+
+}
+
+/* Body */
+
+.modal-body {
+
+    background: #12063d !important;
+
+}
+
+.modal-body * {
+
+    color: white !important;
+
+}
+
+/* Footer */
+
+.modal-footer {
+
+    background: #12063d !important;
+
+    border-top: 1px solid #32206d !important;
+
+}
+
+/* Close */
+
+.close,
+.btn-close {
+
+    color: white !important;
+
+    opacity: 1 !important;
+
+}
+
+/* Inputs */
+
+.modal input,
+.modal textarea,
+.modal select {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    color: white !important;
+
+}
+
+.modal input::placeholder,
+.modal textarea::placeholder {
+
+    color: #ccccdd !important;
+
+}
+
+/* Buttons */
+
+.modal .btn-primary {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+.modal .btn-default {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    color: white !important;
+
+}
+
+/* Alerts */
+
+.alert {
+
+    border: none !important;
+
+    color: white !important;
+
+}
+
+.alert-success {
+
+    background: #0d5f35 !important;
+
+}
+
+.alert-warning {
+
+    background: #7b5600 !important;
+
+}
+
+.alert-danger {
+
+    background: #7d1731 !important;
+
+}
+
+.alert-info {
+
+    background: #163c72 !important;
+
+}
+
+/* Toast */
+
+.toast {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.toast * {
+
+    color: white !important;
+
+}
+
+/* Notification Dropdown */
+
+.notifications-list,
+.notifications-dropdown {
+
+    background: #12063d !important;
+
+}
+
+.notifications-list * {
+
+    color: white !important;
+
+}
+
+.notification-item:hover {
+
+    background: #241062 !important;
+
+}
+
+/* Quick Entry */
+
+.quick-entry-dialog {
+
+    background: #12063d !important;
+
+}
+
+/* Link Selector */
+
+.link-selector,
+.link-selector .modal-content {
+
+    background: #12063d !important;
+
+}
+
+/* Date Picker */
+
+.flatpickr-calendar {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.flatpickr-day {
+
+    color: white !important;
+
+}
+
+.flatpickr-day:hover {
+
+    background: #241062 !important;
+
+}
+
+.flatpickr-day.selected {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+/* Awesomeplete */
+
+.awesomplete > ul {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.awesomplete > ul > li {
+
+    color: white !important;
+
+}
+
+.awesomplete > ul > li:hover {
+
+    background: #241062 !important;
+
+}
+
+/* Loading */
+
+.freeze,
+.modal-backdrop {
+
+    background: rgba(8,2,38,.65) !important;
+
+}

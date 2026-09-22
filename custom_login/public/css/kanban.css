@@ -1,0 +1,194 @@
+/* ==========================================================
+   MORPHOSIS KANBAN
+   Brand : #080226
+========================================================== */
+
+/* =====================================================
+   Board
+===================================================== */
+
+.kanban-board,
+.kanban {
+
+    background:#080226 !important;
+
+}
+
+/* =====================================================
+   Column
+===================================================== */
+
+.kanban-column,
+.kanban-column-container,
+.kanban-column-header {
+
+    background:#12063d !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:18px;
+
+}
+
+.kanban-column-header{
+
+    padding:16px;
+
+}
+
+/* =====================================================
+   Title
+===================================================== */
+
+.kanban-column-title,
+.kanban-column-header *{
+
+    color:#ffffff !important;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   Card
+===================================================== */
+
+.kanban-card,
+.kanban-item{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:14px;
+
+    color:#ffffff !important;
+
+    transition:.25s;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.25);
+
+}
+
+/* Hover */
+
+.kanban-card:hover,
+.kanban-item:hover{
+
+    background:#241062 !important;
+
+    transform:translateY(-3px);
+
+}
+
+/* =====================================================
+   Text
+===================================================== */
+
+.kanban-card *,
+.kanban-item *{
+
+    color:#ffffff !important;
+
+}
+
+/* =====================================================
+   Description
+===================================================== */
+
+.kanban-card .text-muted{
+
+    color:#d5d5ea !important;
+
+}
+
+/* =====================================================
+   Badge
+===================================================== */
+
+.kanban-card .badge{
+
+    background:#5642a5 !important;
+
+    color:white !important;
+
+}
+
+/* =====================================================
+   Avatar
+===================================================== */
+
+.kanban-card .avatar{
+
+    background:#32206d !important;
+
+    color:white !important;
+
+}
+
+/* =====================================================
+   Labels
+===================================================== */
+
+.kanban-label{
+
+    background:#2d1b70 !important;
+
+    color:white !important;
+
+}
+
+/* =====================================================
+   Drag
+===================================================== */
+
+.sortable-ghost{
+
+    opacity:.45;
+
+}
+
+.sortable-chosen{
+
+    background:#2b1972 !important;
+
+}
+
+/* =====================================================
+   Add Card
+===================================================== */
+
+.kanban-add-card{
+
+    background:#160844 !important;
+
+    border:1px dashed #5642a5 !important;
+
+    color:white !important;
+
+}
+
+.kanban-add-card:hover{
+
+    background:#241062 !important;
+
+}
+
+/* =====================================================
+   Scroll
+===================================================== */
+
+.kanban-column::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.kanban-column::-webkit-scrollbar-thumb{
+
+    background:#5642a5;
+
+    border-radius:20px;
+
+}

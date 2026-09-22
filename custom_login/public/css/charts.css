@@ -1,0 +1,155 @@
+/* ==========================================================
+   MORPHOSIS CHARTS
+   Brand : #080226
+========================================================== */
+
+/* Chart Container */
+
+.chart-wrapper,
+.chart-container,
+.frappe-chart {
+
+    background: #12063d !important;
+    border: 1px solid #32206d !important;
+    border-radius: 18px;
+    padding: 15px;
+
+}
+
+/* SVG */
+
+.frappe-chart svg {
+
+    overflow: visible;
+
+}
+
+/* Titles */
+
+.chart-title,
+.chart-title text {
+
+    color: white !important;
+    fill: white !important;
+    font-weight: 600;
+
+}
+
+/* Axis */
+
+.frappe-chart .x-axis text,
+.frappe-chart .y-axis text,
+.frappe-chart .tick text {
+
+    fill: white !important;
+
+}
+
+/* Axis Line */
+
+.frappe-chart .axis path,
+.frappe-chart .axis line,
+.frappe-chart line {
+
+    stroke: #5642a5 !important;
+
+}
+
+/* Grid */
+
+.frappe-chart .grid line {
+
+    stroke: #32206d !important;
+
+}
+
+/* Bars */
+
+.frappe-chart rect {
+
+    fill: #5642a5 !important;
+
+}
+
+/* Line */
+
+.frappe-chart path {
+
+    stroke: white !important;
+
+}
+
+/* Pie */
+
+.frappe-chart path[data-index] {
+
+    stroke: #080226 !important;
+    stroke-width: 2;
+
+}
+
+/* Legend */
+
+.chart-legend,
+.chart-legend * {
+
+    color: white !important;
+
+}
+
+/* Tooltip */
+
+.graph-svg-tip {
+
+    background: #160844 !important;
+    color: white !important;
+    border: 1px solid #32206d !important;
+
+}
+
+.graph-svg-tip:after {
+
+    border-top-color: #160844 !important;
+
+}
+
+/* Values */
+
+.value-label {
+
+    fill: white !important;
+
+}
+
+/* Hover */
+
+.frappe-chart rect:hover {
+
+    opacity: .85;
+
+}
+
+/* Donut */
+
+.donut-chart text {
+
+    fill: white !important;
+
+}
+
+/* Dashboard Chart */
+
+.dashboard-chart {
+
+    background: #160844 !important;
+    border-radius: 18px;
+
+}
+
+/* Resize */
+
+.chart-area {
+
+    background: transparent !important;
+
+}

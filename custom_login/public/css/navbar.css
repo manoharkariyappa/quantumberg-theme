@@ -1,0 +1,238 @@
+/* ======================================================
+   MORPHOSIS NAVBAR
+====================================================== */
+
+.navbar{
+
+    background:#080226 !important;
+    border-bottom:1px solid #24145c !important;
+    box-shadow:none !important;
+
+}
+
+/* Brand */
+
+.navbar-brand{
+
+    color:#fff !important;
+
+}
+
+.navbar-brand:hover{
+
+    color:#fff !important;
+
+}
+
+/* All navbar text */
+
+.navbar *{
+
+    color:#fff !important;
+
+}
+
+/* Search */
+
+.search-bar{
+
+    background:#14063d !important;
+    border:1px solid #32206d !important;
+    border-radius:12px;
+
+}
+
+.search-bar input{
+
+    background:transparent !important;
+    border:none !important;
+    color:#fff !important;
+
+}
+
+.search-bar input::placeholder{
+
+    color:#c9c9d8 !important;
+
+}
+
+/* Icons */
+
+.navbar .icon{
+
+    color:#fff !important;
+
+}
+
+.navbar svg{
+
+    color:#fff !important;
+    stroke:#fff !important;
+
+}
+
+/* Notification */
+
+.notifications-icon svg{
+
+    stroke:#fff !important;
+
+}
+
+.notifications-seen{
+
+    background:#ff5b6b !important;
+
+}
+
+/* Avatar */
+
+.avatar{
+
+    background:#32206d !important;
+    color:#fff !important;
+
+}
+
+.avatar-frame{
+
+    border:none !important;
+
+}
+
+/* Dropdown */
+
+.dropdown-menu{
+
+    background:#12063d !important;
+    border:1px solid #32206d !important;
+    border-radius:14px !important;
+
+}
+
+.dropdown-item{
+
+    color:#fff !important;
+
+}
+
+.dropdown-item:hover{
+
+    background:#24145c !important;
+
+}
+
+/* Awesomebar */
+
+.awesomplete input{
+
+    background:#14063d !important;
+    color:#fff !important;
+
+}
+
+/* Search Result */
+
+.awesomplete>ul{
+
+    background:#12063d !important;
+    border:1px solid #32206d !important;
+
+}
+
+.awesomplete>ul>li{
+
+    color:#fff !important;
+
+}
+
+.awesomplete>ul>li:hover{
+
+    background:#24145c !important;
+
+}
+
+/* Breadcrumb */
+
+.breadcrumb{
+
+    background:transparent !important;
+
+}
+
+.breadcrumb a{
+
+    color:#d8d8ff !important;
+
+}
+
+.breadcrumb-item.active{
+
+    color:#fff !important;
+
+}
+
+/* Navbar Buttons */
+
+.navbar .btn{
+
+    background:#14063d !important;
+    border:1px solid #32206d !important;
+    color:#fff !important;
+
+}
+
+.navbar .btn:hover{
+
+    background:#24145c !important;
+
+}
+
+/* Badge */
+
+.badge{
+
+    background:#5642a5 !important;
+    color:#fff !important;
+
+}
+
+/* User Menu */
+
+.user-action{
+
+    color:#fff !important;
+
+}
+
+/* Menu */
+
+.navbar-nav>li>a{
+
+    color:#fff !important;
+
+}
+
+.navbar-nav>li>a:hover{
+
+    background:#24145c !important;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+
+    background:#080226 !important;
+
+}
+
+.search-bar{
+
+    width:100% !important;
+
+}
+
+}

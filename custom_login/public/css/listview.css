@@ -1,0 +1,194 @@
+/* =========================================================
+   MORPHOSIS LIST VIEW
+   Brand: #080226
+========================================================= */
+
+/* Page */
+
+.list-view,
+.list-page,
+.layout-main-section {
+
+    background: #080226 !important;
+
+}
+
+/* List Header */
+
+.list-row-head {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+    color: white !important;
+
+}
+
+.list-row-head * {
+
+    color: white !important;
+
+}
+
+/* List Rows */
+
+.list-row {
+
+    background: #14063d !important;
+
+    border-bottom: 1px solid #32206d !important;
+
+    transition: .25s;
+
+}
+
+.list-row:hover {
+
+    background: #21115e !important;
+
+}
+
+/* Alternate Rows */
+
+.list-row:nth-child(even) {
+
+    background: #17084a !important;
+
+}
+
+/* Text */
+
+.list-row * {
+
+    color: white !important;
+
+}
+
+/* Subject */
+
+.list-subject a {
+
+    color: white !important;
+
+    font-weight: 600;
+
+}
+
+/* Status */
+
+.indicator-pill {
+
+    border: none !important;
+
+    border-radius: 30px;
+
+}
+
+/* Checkbox */
+
+.list-row-checkbox input {
+
+    accent-color: white;
+
+}
+
+/* Buttons */
+
+.list-page .btn {
+
+    border-radius: 10px;
+
+}
+
+.list-page .btn-primary {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+.list-page .btn-default {
+
+    background: #14063d !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+/* Filters */
+
+.filter-section {
+
+    background: #12063d !important;
+
+    border-radius: 12px;
+
+}
+
+.filter-section * {
+
+    color: white !important;
+
+}
+
+/* Search */
+
+.list-sidebar .form-control,
+
+.list-page .form-control {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+    color: white !important;
+
+}
+
+.list-page .form-control::placeholder {
+
+    color: #ccccdd !important;
+
+}
+
+/* Pagination */
+
+.page-link {
+
+    background: #14063d !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.page-item.active .page-link {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+/* Tags */
+
+.tag-pill {
+
+    background: #32206d !important;
+
+    color: white !important;
+
+}
+
+/* Empty State */
+
+.list-empty-state {
+
+    color: white !important;
+
+}

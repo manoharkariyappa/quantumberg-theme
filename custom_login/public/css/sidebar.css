@@ -1,0 +1,240 @@
+/* ==========================================================
+   QUANTUMBERG MAIN SIDEBAR
+   ERPNext v16
+   ========================================================== */
+
+
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+.body-sidebar {
+
+    background:
+        linear-gradient(
+            180deg,
+            #453D89 0%,
+            #51438F 45%,
+            #C8499A 100%
+        ) !important;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+
+/* ==========================================================
+   TEXT
+   ========================================================== */
+
+.body-sidebar,
+.body-sidebar * {
+
+    color:
+        #FFFFFF !important;
+}
+
+
+/* ==========================================================
+   SIDEBAR ITEMS
+   ========================================================== */
+
+.body-sidebar .standard-sidebar-item,
+.body-sidebar .sidebar-item,
+.body-sidebar .tree-link,
+.body-sidebar .sidebar-item-container {
+
+    background:
+        transparent !important;
+
+    color:
+        #FFFFFF !important;
+
+    border-radius:
+        9px !important;
+
+    margin:
+        4px 8px !important;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease !important;
+}
+
+
+/* ==========================================================
+   HOVER
+   ========================================================== */
+
+.body-sidebar .standard-sidebar-item:hover,
+.body-sidebar .sidebar-item:hover,
+.body-sidebar .tree-link:hover {
+
+    background:
+        rgba(255, 255, 255, 0.12) !important;
+
+    color:
+        #FFFFFF !important;
+}
+
+
+/* ==========================================================
+   ACTIVE ITEM
+   ========================================================== */
+
+.body-sidebar .standard-sidebar-item.selected,
+.body-sidebar .standard-sidebar-item.active {
+
+    background:
+        linear-gradient(
+            90deg,
+            #673AB7 0%,
+            #B83C91 100%
+        ) !important;
+
+    border-left:
+        4px solid #FFFFFF !important;
+
+    box-shadow:
+        0 4px 12px rgba(69, 61, 137, 0.25) !important;
+}
+
+
+/* ==========================================================
+   ACTIVE TEXT
+   ========================================================== */
+
+.body-sidebar .standard-sidebar-item.selected *,
+.body-sidebar .standard-sidebar-item.active * {
+
+    color:
+        #FFFFFF !important;
+}
+
+
+/* ==========================================================
+   ICONS
+   ========================================================== */
+
+.body-sidebar svg,
+.body-sidebar .icon {
+
+    color:
+        #FFFFFF !important;
+
+    stroke:
+        #FFFFFF !important;
+}
+
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+.body-sidebar a {
+
+    color:
+        #FFFFFF !important;
+
+    text-decoration:
+        none !important;
+}
+
+
+/* ==========================================================
+   SEARCH
+   ========================================================== */
+
+.body-sidebar .form-control,
+.body-sidebar input {
+
+    background:
+        rgba(255, 255, 255, 0.10) !important;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.20) !important;
+
+    color:
+        #FFFFFF !important;
+
+    border-radius:
+        8px !important;
+}
+
+
+/* ==========================================================
+   SEARCH PLACEHOLDER
+   ========================================================== */
+
+.body-sidebar input::placeholder {
+
+    color:
+        rgba(255, 255, 255, 0.70) !important;
+}
+
+
+/* ==========================================================
+   SEARCH FOCUS
+   ========================================================== */
+
+.body-sidebar .form-control:focus,
+.body-sidebar input:focus {
+
+    border-color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.15) !important;
+}
+
+
+/* ==========================================================
+   BADGE
+   ========================================================== */
+
+.body-sidebar .badge {
+
+    background:
+        #C8499A !important;
+
+    color:
+        #FFFFFF !important;
+
+    border-radius:
+        20px !important;
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+.body-sidebar::-webkit-scrollbar {
+
+    width:
+        7px;
+}
+
+
+.body-sidebar::-webkit-scrollbar-thumb {
+
+    background:
+        #C8499A !important;
+
+    border-radius:
+        20px;
+}
+
+
+.body-sidebar::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #D85BA8 !important;
+}
+
+
+.body-sidebar::-webkit-scrollbar-track {
+
+    background:
+        #453D89 !important;
+}

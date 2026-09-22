@@ -1,0 +1,122 @@
+/* ==========================================================
+   QUANTUMBERG BRAND THEME
+   ERPNext v16
+   ========================================================== */
+
+:root {
+
+    /* ======================================================
+       QUANTUMBERG BRAND COLORS
+       ====================================================== */
+
+    --qb-primary: #453D89;
+
+    --qb-primary-dark: #3A3375;
+
+    --qb-primary-light: #673AB7;
+
+    --qb-purple: #51438F;
+
+    --qb-magenta: #B83C91;
+
+    --qb-magenta-light: #C8499A;
+
+    --qb-accent: #D85BA8;
+
+
+    /* ======================================================
+       SIDEBAR
+       ====================================================== */
+
+    --qb-sidebar-start: #453D89;
+
+    --qb-sidebar-middle: #51438F;
+
+    --qb-sidebar-end: #C8499A;
+
+
+    /* ======================================================
+       ACTIVE SIDEBAR ITEM
+       ====================================================== */
+
+    --qb-active-start: #673AB7;
+
+    --qb-active-end: #B83C91;
+
+
+    /* ======================================================
+       LIGHT THEME
+       ====================================================== */
+
+    --qb-background: #FFFFFF;
+
+    --qb-surface: #FFFFFF;
+
+    --qb-background-soft: #F8F5FA;
+
+    --qb-border: #E7DDF0;
+
+    --qb-border-light: #F0EAF4;
+
+
+    /* ======================================================
+       TEXT
+       ====================================================== */
+
+    --qb-text: #321247;
+
+    --qb-text-dark: #251032;
+
+    --qb-text-muted: #75657D;
+
+
+    /* ======================================================
+       ERPNext VARIABLES
+       ====================================================== */
+
+    --surface-menu-bar: #453D89 !important;
+
+    --sidebar-border-color: #6E619E !important;
+
+    --primary-color: #453D89 !important;
+
+    --accent-color: #B83C91 !important;
+
+
+    /* ======================================================
+       EXTRA ERPNext COLORS
+       ====================================================== */
+
+    --brand-primary: #453D89 !important;
+
+    --brand-secondary: #C8499A !important;
+
+    --primary: #453D89 !important;
+
+    --primary-dark: #3A3375 !important;
+
+    --primary-light: #673AB7 !important;
+
+    --accent: #B83C91 !important;
+
+
+    /* ======================================================
+       FORM / FOCUS COLORS
+       ====================================================== */
+
+    --focus-color: #C8499A !important;
+
+    --input-focus-border-color: #C8499A !important;
+
+
+    /* ======================================================
+       STATUS / HIGHLIGHT
+       ====================================================== */
+
+    --qb-success: #2E9D72;
+
+    --qb-warning: #E4A11B;
+
+    --qb-danger: #D9534F;
+
+}

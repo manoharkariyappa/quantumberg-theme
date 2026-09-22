@@ -1,0 +1,394 @@
+/* ===========================================================
+   MORPHOSIS ERPNext v16 OVERRIDES
+   Brand : #080226
+===========================================================*/
+
+/* -----------------------------------------------------------
+   CSS VARIABLES
+------------------------------------------------------------*/
+
+:root{
+
+    --primary:#080226 !important;
+    --primary-color:#080226 !important;
+    --primary-hover:#14063d !important;
+
+    --gray-50:#080226 !important;
+    --gray-100:#12063d !important;
+    --gray-200:#160844 !important;
+    --gray-300:#1f0d5a !important;
+
+    --control-bg:#160844 !important;
+    --control-border:#32206d !important;
+
+    --text-color:#ffffff !important;
+    --heading-color:#ffffff !important;
+    --fg-color:#ffffff !important;
+
+    --card-bg:#12063d !important;
+    --bg-color:#080226 !important;
+
+    --border-color:#32206d !important;
+
+}
+
+/* -----------------------------------------------------------
+   PAGE
+------------------------------------------------------------*/
+
+/* body,
+#body,
+.page-container,
+.layout-main,
+.layout-main-section,
+.desk-container,
+.workspace-body{
+
+    background:#080226 !important;
+
+} */
+
+/* -----------------------------------------------------------
+   WHITE PANELS
+------------------------------------------------------------*/
+
+/* .white-area,
+.widget-group,
+.widget-group-body,
+.form-dashboard,
+.page-card,
+.widget,
+.workspace-card,
+.report-wrapper,
+.form-section,
+.section-body{
+
+    background:#12063d !important;
+
+    border:1px solid #32206d !important;
+
+} */
+
+
+
+[class*="card"],
+[class*="Card"],
+[class*="panel"],
+[class*="Panel"]{
+
+    background:#12063d !important;
+    color:white !important;
+
+}
+
+input,
+textarea,
+select{
+
+    background:#160844 !important;
+    color:white !important;
+    border:1px solid #32206d !important;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#d0d0e5 !important;
+
+}
+
+/* -----------------------------------------------------------
+   BUTTONS
+------------------------------------------------------------*/
+
+button{
+
+    border-radius:10px !important;
+
+}
+
+.btn-primary{
+
+    background:white !important;
+    color:#080226 !important;
+
+}
+
+.btn-secondary,
+.btn-default{
+
+    background:#160844 !important;
+    color:white !important;
+    border:1px solid #32206d !important;
+
+}
+
+
+/*
+.list-row{
+
+    background:#160844 !important;
+
+}
+
+.list-row:hover{
+
+    background:#241062 !important;
+
+} */
+
+/* .grid-heading-row{
+
+    background:#12063d !important;
+
+}
+
+.grid-row{
+
+    background:#160844 !important;
+
+} */
+
+
+/* table{
+
+    background:#160844 !important;
+
+} */
+
+/* thead{
+
+    background:#12063d !important;
+
+} */
+
+td,
+th{
+
+    color:white !important;
+
+}
+
+/* -----------------------------------------------------------
+   LINKS
+------------------------------------------------------------*/
+
+a{
+
+    color:white !important;
+
+}
+
+a:hover{
+
+    color:#d4c9ff !important;
+
+}
+
+/* -----------------------------------------------------------
+   ICONS
+------------------------------------------------------------*/
+
+svg{
+
+    stroke:white !important;
+
+}
+
+.icon{
+
+    color:white !important;
+
+}
+
+/* -----------------------------------------------------------
+   SIDEBAR ACTIVE
+------------------------------------------------------------*/
+
+.standard-sidebar-item.selected{
+
+    background:#241062 !important;
+
+    border-left:4px solid white;
+
+}
+
+/* -----------------------------------------------------------
+   REPORT
+------------------------------------------------------------*/
+
+.query-report{
+
+    background:#080226 !important;
+
+}
+
+
+.modal-content{
+
+    background:#12063d !important;
+
+}
+
+
+.dropdown-menu{
+
+    background:#12063d !important;
+
+}
+
+
+.timeline-item{
+
+    background:#160844 !important;
+
+}
+
+
+
+.tag{
+
+    background:#32206d !important;
+
+    color:white !important;
+
+}
+
+
+.badge{
+
+    background:#5642a5 !important;
+
+}
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0b0328;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#5642a5;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6d58d3;
+
+}
+/* =====================================================
+   ERPNext v16 Sidebar
+===================================================== */
+
+.body-sidebar{
+
+    background:#080226 !important;
+
+    border-right:1px solid #32206d !important;
+
+}
+
+.body-sidebar *{
+
+    color:white !important;
+
+}
+
+.body-sidebar .sidebar-item{
+
+    color:white !important;
+
+}
+
+.body-sidebar .sidebar-item:hover{
+
+    background:#14063d !important;
+
+}
+
+.body-sidebar .selected{
+
+    background:#241062 !important;
+
+}
+
+/* Search */
+
+.body-sidebar input{
+
+    background:#160844 !important;
+
+    color:white !important;
+
+    border:1px solid #32206d !important;
+
+}
+
+/* ==========================================================
+   PROFILE MENU / USER DROPDOWN
+========================================================== */
+
+.dropdown-menu,
+.dropdown-menu-right,
+.dropdown-menu-end,
+.user-dropdown,
+.user-menu,
+.navbar-dropdown,
+.popover,
+.popover-body,
+.popover-content{
+
+    background:#080226 !important;
+    border:1px solid #32206d !important;
+    color:#ffffff !important;
+    border-radius:16px !important;
+    box-shadow:0 15px 40px rgba(0,0,0,.35) !important;
+
+}
+
+/* Menu Items */
+
+.dropdown-item,
+.dropdown-menu a,
+.dropdown-menu button{
+
+    color:#ffffff !important;
+    background:transparent !important;
+
+}
+
+.dropdown-item:hover,
+.dropdown-menu a:hover,
+.dropdown-menu button:hover{
+
+    background:#241062 !important;
+    color:#ffffff !important;
+
+}
+
+/* Icons */
+
+.dropdown-menu svg,
+.dropdown-menu .icon{
+
+    color:#ffffff !important;
+    stroke:#ffffff !important;
+
+}
+
+
+.dropdown-divider{
+
+    border-color:#32206d !important;
+
+}

@@ -1,0 +1,259 @@
+/* ==========================================================
+   MORPHOSIS DASHBOARD
+   Brand : #080226
+========================================================== */
+
+/* Dashboard */
+
+.dashboard,
+.dashboard-view,
+.dashboard-page,
+.dashboard-container{
+
+    background:#080226 !important;
+
+}
+
+/* Dashboard Sections */
+
+.dashboard-section{
+
+    background:#12063d !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+/* Section Title */
+
+.dashboard-section-title,
+.dashboard-section h4,
+.dashboard-section h5{
+
+    color:white !important;
+
+    font-weight:600;
+
+}
+
+/* Number Card */
+
+.number-card{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:16px;
+
+    transition:.3s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.30);
+
+}
+
+.number-card:hover{
+
+    background:#241062 !important;
+
+    transform:translateY(-4px);
+
+}
+
+.number-card *{
+
+    color:white !important;
+
+}
+
+/* Number */
+
+.number-card-value{
+
+    color:white !important;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+/* Label */
+
+.number-card-label{
+
+    color:#d7d7ea !important;
+
+}
+
+/* Widget */
+
+.widget,
+.widget-body,
+.widget-content{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:16px;
+
+}
+
+.widget *{
+
+    color:white !important;
+
+}
+
+/* Progress */
+
+.progress{
+
+    background:#2c1b73 !important;
+
+    height:10px;
+
+    border-radius:20px;
+
+}
+
+.progress-bar{
+
+    background:white !important;
+
+}
+
+/* Heatmap */
+
+.heatmap{
+
+    background:#12063d !important;
+
+}
+
+.heatmap rect{
+
+    stroke:#32206d !important;
+
+}
+
+/* Dashboard Chart */
+
+.chart-wrapper,
+.chart-container{
+
+    background:#160844 !important;
+
+    border-radius:16px;
+
+    border:1px solid #32206d !important;
+
+}
+
+.chart-title{
+
+    color:white !important;
+
+}
+
+/* SVG */
+
+.chart-wrapper svg text{
+
+    fill:white !important;
+
+}
+
+.chart-wrapper svg line{
+
+    stroke:#5f48bf !important;
+
+}
+
+.chart-wrapper svg path{
+
+    stroke:#ffffff !important;
+
+}
+
+/* KPI */
+
+.kpi-card{
+
+    background:#160844 !important;
+
+    border-radius:16px;
+
+    border:1px solid #32206d !important;
+
+}
+
+.kpi-card *{
+
+    color:white !important;
+
+}
+
+/* Indicator */
+
+.indicator{
+
+    color:white !important;
+
+}
+
+/* Dashboard Link */
+
+.dashboard a{
+
+    color:white !important;
+
+}
+
+.dashboard a:hover{
+
+    color:#cfc8ff !important;
+
+}
+
+/* Cards */
+
+.dashboard-card{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:16px;
+
+}
+
+.dashboard-card:hover{
+
+    background:#241062 !important;
+
+}
+
+/* Scroll */
+
+.dashboard ::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.dashboard ::-webkit-scrollbar-thumb{
+
+    background:#5642a5;
+
+    border-radius:20px;
+
+}

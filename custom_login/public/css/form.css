@@ -1,0 +1,376 @@
+/* ===========================================================
+   MORPHOSIS FORM VIEW
+   Brand : #080226
+===========================================================*/
+
+/* Main */
+
+.form-page,
+.form-layout,
+.layout-main,
+.page-container,
+.page-body,
+.page-form {
+
+    background:#080226 !important;
+
+}
+
+/* Form Sections */
+
+.form-section,
+.section-body,
+.form-dashboard,
+.dashboard-section,
+.form-column {
+
+    background:#12063d !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:16px;
+
+    color:white !important;
+
+}
+
+/* Section Heading */
+
+.section-head,
+.section-head *{
+
+    color:white !important;
+
+    font-weight:600;
+
+}
+
+/* Labels */
+
+label,
+.control-label,
+.form-label{
+
+    color:white !important;
+
+}
+
+/* Inputs */
+
+.form-control{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    color:white !important;
+
+    border-radius:10px;
+
+}
+
+.form-control:focus{
+
+    border-color:white !important;
+
+    box-shadow:0 0 0 3px rgba(255,255,255,.12)!important;
+
+}
+
+.form-control::placeholder{
+
+    color:#cfcfe8 !important;
+
+}
+
+/* Read Only */
+
+.control-value{
+
+    color:white !important;
+
+}
+
+/* Select */
+
+select{
+
+    background:#160844 !important;
+
+    color:white !important;
+
+}
+
+/* Link Field */
+
+.link-field{
+
+    color:white !important;
+
+}
+
+/* Buttons */
+
+.btn-primary{
+
+    background:white !important;
+
+    color:#080226 !important;
+
+}
+
+.btn-default{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    color:white !important;
+
+}
+
+/* Tabs */
+
+.nav-tabs{
+
+    border-bottom:1px solid #32206d !important;
+
+}
+
+.nav-tabs .nav-link{
+
+    color:#ddddff !important;
+
+}
+
+.nav-tabs .nav-link.active{
+
+    background:#160844 !important;
+
+    color:white !important;
+
+    border:1px solid #32206d !important;
+
+}
+
+/* Child Table */
+
+.grid-heading-row{
+
+    background:#12063d !important;
+
+}
+
+.grid-heading-row *{
+
+    color:white !important;
+
+}
+
+.grid-row{
+
+    background:#160844 !important;
+
+}
+
+.grid-row:nth-child(even){
+
+    background:#1a0c52 !important;
+
+}
+
+.grid-row:hover{
+
+    background:#231168 !important;
+
+}
+
+.grid-row *{
+
+    color:white !important;
+
+}
+
+/* Timeline */
+
+.timeline-item{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+    border-radius:12px;
+
+}
+
+.timeline-item *{
+
+    color:white !important;
+
+}
+
+/* Comments */
+
+.comment-box{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+}
+
+.comment-box *{
+
+    color:white !important;
+
+}
+
+/* Attachments */
+
+.attachment-row{
+
+    background:#160844 !important;
+
+    border-bottom:1px solid #32206d !important;
+
+}
+
+.attachment-row *{
+
+    color:white !important;
+
+}
+
+/* Dashboard */
+
+.form-dashboard{
+
+    background:#160844 !important;
+
+}
+
+.form-dashboard *{
+
+    color:white !important;
+
+}
+
+/* Progress */
+
+.progress{
+
+    background:#2c1b73 !important;
+
+}
+
+.progress-bar{
+
+    background:white !important;
+
+}
+
+/* Tags */
+
+.tag-pill{
+
+    background:#2b1b70 !important;
+
+    color:white !important;
+
+}
+
+/* Indicators */
+
+.indicator{
+
+    color:white !important;
+
+}
+
+/* Cards */
+
+.card{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+}
+
+.card *{
+
+    color:white !important;
+
+}
+
+/* Help */
+
+.help-box{
+
+    background:#160844 !important;
+
+    border:1px solid #32206d !important;
+
+}
+
+/* Table */
+
+table{
+
+    background:#160844 !important;
+
+}
+
+th{
+
+    background:#12063d !important;
+
+    color:white !important;
+
+}
+
+td{
+
+    color:white !important;
+
+}
+
+/* Dialog */
+
+.modal-content{
+
+    background:#12063d !important;
+
+}
+
+.modal-header{
+
+    border-bottom:1px solid #32206d !important;
+
+}
+
+.modal-footer{
+
+    border-top:1px solid #32206d !important;
+
+}
+
+.modal-content *{
+
+    color:white !important;
+
+}
+
+/* Breadcrumb */
+
+.breadcrumb{
+
+    background:transparent !important;
+
+}
+
+.breadcrumb *{
+
+    color:white !important;
+
+}

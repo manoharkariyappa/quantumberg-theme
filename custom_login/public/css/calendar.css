@@ -1,0 +1,231 @@
+/* ==========================================================
+   MORPHOSIS CALENDAR
+   Brand : #080226
+========================================================== */
+
+/* Calendar */
+
+.fc,
+.fc-view-harness,
+.fc-scrollgrid {
+
+    background: #080226 !important;
+
+    color: white !important;
+
+}
+
+/* Toolbar */
+
+.fc-toolbar {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+}
+
+.fc-toolbar * {
+
+    color: white !important;
+
+}
+
+/* Buttons */
+
+.fc-button {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    color: white !important;
+
+    border-radius: 10px !important;
+
+}
+
+.fc-button:hover {
+
+    background: #241062 !important;
+
+}
+
+.fc-button-active {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+/* Header */
+
+.fc-col-header-cell {
+
+    background: #12063d !important;
+
+}
+
+.fc-col-header-cell-cushion {
+
+    color: white !important;
+
+    font-weight: 600;
+
+}
+
+/* Day */
+
+.fc-daygrid-day {
+
+    background: #160844 !important;
+
+    border-color: #32206d !important;
+
+}
+
+.fc-daygrid-day:hover {
+
+    background: #241062 !important;
+
+}
+
+/* Today */
+
+.fc-day-today {
+
+    background: #2b1b70 !important;
+
+}
+
+/* Day Number */
+
+.fc-daygrid-day-number {
+
+    color: white !important;
+
+}
+
+/* Events */
+
+.fc-event {
+
+    background: #5642a5 !important;
+
+    border: none !important;
+
+    color: white !important;
+
+    border-radius: 8px;
+
+}
+
+.fc-event:hover {
+
+    background: #715ad4 !important;
+
+}
+
+/* Time Grid */
+
+.fc-timegrid-slot {
+
+    border-color: #32206d !important;
+
+}
+
+.fc-timegrid-axis {
+
+    background: #12063d !important;
+
+    color: white !important;
+
+}
+
+/* Month Grid */
+
+.fc-scrollgrid td,
+.fc-scrollgrid th {
+
+    border-color: #32206d !important;
+
+}
+
+/* Popover */
+
+.fc-popover {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+.fc-popover * {
+
+    color: white !important;
+
+}
+
+/* More Link */
+
+.fc-daygrid-more-link {
+
+    color: white !important;
+
+}
+
+/* Week Numbers */
+
+.fc-daygrid-week-number {
+
+    color: #ccccdd !important;
+
+}
+
+/* List View */
+
+.fc-list {
+
+    background: #12063d !important;
+
+}
+
+.fc-list-event {
+
+    background: #160844 !important;
+
+}
+
+.fc-list-event:hover {
+
+    background: #241062 !important;
+
+}
+
+.fc-list-event * {
+
+    color: white !important;
+
+}
+
+/* Scroll */
+
+.fc-scroller::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+.fc-scroller::-webkit-scrollbar-thumb {
+
+    background: #5642a5;
+
+    border-radius: 20px;
+
+}

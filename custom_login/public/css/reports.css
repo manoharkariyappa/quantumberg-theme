@@ -1,0 +1,219 @@
+/* ==========================================================
+   MORPHOSIS REPORTS
+   Brand: #080226
+========================================================== */
+
+/* Report Container */
+
+.query-report,
+.report-wrapper,
+.report-container,
+.report-page {
+
+    background: #080226 !important;
+    color: white !important;
+
+}
+
+/* Report Header */
+
+.page-form,
+.report-toolbar,
+.query-report-toolbar {
+
+    background: #12063d !important;
+    border-bottom: 1px solid #32206d !important;
+
+}
+
+.page-form * {
+
+    color: white !important;
+
+}
+
+/* Report Filters */
+
+.filter-area,
+.report-filters {
+
+    background: #12063d !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+}
+
+.filter-area label,
+.filter-area .control-label {
+
+    color: white !important;
+
+}
+
+/* Filter Inputs */
+
+.filter-area input,
+.filter-area select,
+.filter-area textarea {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    color: white !important;
+
+}
+
+.filter-area input::placeholder {
+
+    color: #ccccdd !important;
+
+}
+
+/* Buttons */
+
+.query-report .btn-primary {
+
+    background: white !important;
+
+    color: #080226 !important;
+
+}
+
+.query-report .btn-default {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+    border: 1px solid #32206d !important;
+
+}
+
+/* Summary Cards */
+
+.report-summary,
+.number-card,
+.dashboard-number-card {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 14px;
+
+}
+
+.report-summary *,
+.number-card * {
+
+    color: white !important;
+
+}
+
+/* Chart */
+
+.chart-wrapper,
+.chart-container {
+
+    background: #160844 !important;
+
+    border: 1px solid #32206d !important;
+
+    border-radius: 14px;
+
+}
+
+.chart-wrapper text {
+
+    fill: white !important;
+
+}
+
+.chart-wrapper line {
+
+    stroke: #5642a5 !important;
+
+}
+
+/* Empty Report */
+
+.empty-state,
+.no-result {
+
+    color: white !important;
+
+}
+
+/* Export */
+
+.export-btn {
+
+    background: #160844 !important;
+
+    color: white !important;
+
+}
+
+/* Print */
+
+.print-preview {
+
+    background: white !important;
+
+    color: black !important;
+
+}
+
+/* Totals */
+
+.report-footer,
+.total-row {
+
+    background: #12063d !important;
+
+    color: white !important;
+
+    font-weight: 600;
+
+}
+
+/* Progress */
+
+.progress {
+
+    background: #2d1b70 !important;
+
+}
+
+.progress-bar {
+
+    background: white !important;
+
+}
+
+/* Report Links */
+
+.query-report a {
+
+    color: white !important;
+
+}
+
+.query-report a:hover {
+
+    color: #d2c8ff !important;
+
+}
+
+/* Icons */
+
+.query-report svg {
+
+    stroke: white !important;
+
+}
