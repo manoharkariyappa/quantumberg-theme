@@ -1,10 +1,5 @@
 (() => {
 
-    /*
-     * ============================================================
-     * CUSTOM MODULE ICONS
-     * ============================================================
-     */
 
     const customIcons = {
         "ERPNext Settings":
@@ -54,22 +49,10 @@
     };
 
 
-    /*
-     * ============================================================
-     * GET ICON
-     * ============================================================
-     */
-
     function getIcon(name) {
         return customIcons[name] || null;
     }
 
-
-    /*
-     * ============================================================
-     * 1. DESKTOP PAGE ICONS
-     * ============================================================
-     */
 
     function replaceDesktopIcons() {
 
@@ -110,9 +93,6 @@
 
                 iconContainer.innerHTML = "";
 
-                /*
-                 * Add custom icon
-                 */
 
                 image =
                     document.createElement("img");
@@ -131,34 +111,15 @@
     }
 
 
-    /*
-     * ============================================================
-     * 2. TOP SIDEBAR HEADER ICON
-     * ============================================================
-     *
-     * Example:
-     *
-     *      [ BUYING ICON ] Buying
-     *                     ERPNext
-     *
-     * This is the icon at the very top of the
-     * left sidebar.
-     */
+   
 
     function replaceSidebarHeaderIcon() {
 
-        /*
-         * Frappe v16 sidebar header logo
-         */
 
         const headerLogo =
             document.querySelector(".header-logo");
 
         if (headerLogo) {
-
-            /*
-             * Don't replace twice
-             */
 
             if (
                 headerLogo.dataset.customIconApplied === "1"
@@ -166,9 +127,6 @@
                 return;
             }
 
-            /*
-             * Determine current workspace/module.
-             */
 
             const titleElement =
                 document.querySelector(
@@ -181,11 +139,6 @@
                 moduleName =
                     titleElement.textContent.trim();
             }
-
-            /*
-             * Fallback:
-             * Look for sidebar title.
-             */
 
             if (!moduleName) {
 
@@ -223,10 +176,6 @@
             }
 
 
-            /*
-             * If header-logo itself is IMG
-             */
-
             if (
                 headerLogo.tagName === "IMG"
             ) {
@@ -235,10 +184,6 @@
                     imageUrl;
 
             }
-
-            /*
-             * If Frappe uses SVG/container
-             */
 
             else {
 
@@ -267,10 +212,6 @@
         }
 
 
-        /*
-         * Some Frappe builds use icon-container
-         * instead of .header-logo.
-         */
 
         const headerContainer =
             document.querySelector(
@@ -281,10 +222,6 @@
             return;
         }
 
-
-        /*
-         * Get workspace title
-         */
 
         const titleElement =
             document.querySelector(
@@ -307,16 +244,8 @@
         }
 
 
-        /*
-         * Remove default SVG
-         */
 
         headerContainer.innerHTML = "";
-
-
-        /*
-         * Add custom image
-         */
 
         const image =
             document.createElement("img");
@@ -332,22 +261,6 @@
         );
 
     }
-
-
-    /*
-     * ============================================================
-     * 3. GETTING STARTED POPUP ICON
-     * ============================================================
-     *
-     * Example:
-     *
-     *       Getting Started
-     *
-     *            [ BUYING ICON ]
-     *
-     *          Buying Setup
-     *
-     */
 
     // function replaceGettingStartedIcon() {
 
@@ -501,10 +414,7 @@
     // }
 function replaceGettingStartedIcon() {
 
-    /*
-     * Find all possible dialogs/popups
-     */
-
+   
     const containers = document.querySelectorAll(
         '[role="dialog"], .modal, .drawer'
     );
@@ -515,25 +425,11 @@ function replaceGettingStartedIcon() {
             .replace(/\s+/g, " ")
             .trim();
 
-        /*
-         * Must be a Getting Started popup
-         */
-
+       
         if (!text.includes("Getting Started")) {
             return;
         }
 
-
-        /*
-         * Find which module this popup belongs to.
-         *
-         * Examples:
-         *
-         * Buying Setup
-         * Accounting Setup
-         * Assets Setup
-         * Selling Setup
-         */
 
         let moduleName = null;
 
@@ -548,18 +444,12 @@ function replaceGettingStartedIcon() {
         });
 
 
-        /*
-         * If module was not found, stop.
-         */
 
         if (!moduleName) {
             return;
         }
 
 
-        /*
-         * Get corresponding image
-         */
 
         const imageUrl =
             customIcons[moduleName];
@@ -568,11 +458,6 @@ function replaceGettingStartedIcon() {
             return;
         }
 
-
-        /*
-         * If our custom icon is already present,
-         * update it if necessary.
-         */
 
         const existingImage =
             container.querySelector(
@@ -597,10 +482,6 @@ function replaceGettingStartedIcon() {
         }
 
 
-        /*
-         * Find SVG icons in the popup.
-         */
-
         const svgs =
             container.querySelectorAll("svg");
 
@@ -618,13 +499,6 @@ function replaceGettingStartedIcon() {
             const rect =
                 svg.getBoundingClientRect();
 
-
-            /*
-             * Getting Started module icon
-             * is normally much larger than
-             * close / expand / check icons.
-             */
-
             if (
                 rect.width >= 40 &&
                 rect.height >= 40 &&
@@ -638,11 +512,6 @@ function replaceGettingStartedIcon() {
 
         });
 
-
-        /*
-         * If SVG wasn't found, look for
-         * existing image.
-         */
 
         if (!targetIcon) {
 
@@ -668,10 +537,6 @@ function replaceGettingStartedIcon() {
                     rect.height <= 120
                 ) {
 
-                    /*
-                     * Don't replace our own image.
-                     */
-
                     if (
                         !img.classList.contains(
                             "custom-getting-started-icon"
@@ -694,9 +559,6 @@ function replaceGettingStartedIcon() {
         }
 
 
-        /*
-         * Create custom image
-         */
 
         const image =
             document.createElement("img");
@@ -711,21 +573,12 @@ function replaceGettingStartedIcon() {
             moduleName;
 
 
-        /*
-         * Replace the original Frappe icon
-         */
-
         targetIcon.replaceWith(image);
 
     });
 }
 
-    /*
-     * ============================================================
-     * RUN EVERYTHING
-     * ============================================================
-     */
-
+   
     function replaceAllIcons() {
 
         replaceDesktopIcons();
@@ -737,21 +590,10 @@ function replaceGettingStartedIcon() {
     }
 
 
-    /*
-     * ============================================================
-     * START
-     * ============================================================
-     */
-
     function start() {
 
         replaceAllIcons();
 
-
-        /*
-         * Frappe is a SPA and dynamically
-         * creates the sidebar and popup.
-         */
 
         const observer =
             new MutationObserver(() => {
@@ -770,9 +612,6 @@ function replaceGettingStartedIcon() {
         );
 
 
-        /*
-         * Extra runs after page rendering.
-         */
 
         setTimeout(
             replaceAllIcons,
