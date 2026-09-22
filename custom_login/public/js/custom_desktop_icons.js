@@ -2,20 +2,11 @@
 
     /*
      * ============================================================
-     * CUSTOM DESKTOP ICONS
+     * CUSTOM MODULE ICONS
      * ============================================================
-     *
-     * Images are bundled inside:
-     *
-     * custom_login/custom_login/public/images/
-     *
-     * Browser path:
-     *
-     * /assets/custom_login/images/<filename>
      */
 
     const customIcons = {
-
         "ERPNext Settings":
             "/assets/custom_login/images/erpnext_settings.png",
 
@@ -65,22 +56,251 @@
 
     /*
      * ============================================================
-     * REPLACE ICON
+     * GET ICON
      * ============================================================
      */
 
-    function replaceIcon(desktopIcon) {
+    function getIcon(name) {
+        return customIcons[name] || null;
+    }
 
-        const name =
-            desktopIcon.getAttribute("data-id");
 
-        if (!name) {
+    /*
+     * ============================================================
+     * 1. DESKTOP PAGE ICONS
+     * ============================================================
+     */
+
+    function replaceDesktopIcons() {
+
+        document
+            .querySelectorAll(".desktop-icon[data-id]")
+            .forEach((desktopIcon) => {
+
+                const name =
+                    desktopIcon.getAttribute("data-id");
+
+                const imageUrl =
+                    getIcon(name);
+
+                if (!imageUrl) {
+                    return;
+                }
+
+                const iconContainer =
+                    desktopIcon.querySelector(".icon-container");
+
+                if (!iconContainer) {
+                    return;
+                }
+
+                let image =
+                    iconContainer.querySelector(
+                        ".custom-desktop-icon"
+                    );
+
+                if (image) {
+                    image.src = imageUrl;
+                    return;
+                }
+
+                /*
+                 * Remove Frappe default icon
+                 */
+
+                iconContainer.innerHTML = "";
+
+                /*
+                 * Add custom icon
+                 */
+
+                image =
+                    document.createElement("img");
+
+                image.className =
+                    "custom-desktop-icon";
+
+                image.alt = name;
+
+                image.src = imageUrl;
+
+                iconContainer.appendChild(image);
+
+            });
+
+    }
+
+
+    /*
+     * ============================================================
+     * 2. TOP SIDEBAR HEADER ICON
+     * ============================================================
+     *
+     * Example:
+     *
+     *      [ BUYING ICON ] Buying
+     *                     ERPNext
+     *
+     * This is the icon at the very top of the
+     * left sidebar.
+     */
+
+    function replaceSidebarHeaderIcon() {
+
+        /*
+         * Frappe v16 sidebar header logo
+         */
+
+        const headerLogo =
+            document.querySelector(".header-logo");
+
+        if (headerLogo) {
+
+            /*
+             * Don't replace twice
+             */
+
+            if (
+                headerLogo.dataset.customIconApplied === "1"
+            ) {
+                return;
+            }
+
+            /*
+             * Determine current workspace/module.
+             */
+
+            const titleElement =
+                document.querySelector(
+                    ".sidebar-item-label.header-title"
+                );
+
+            let moduleName = "";
+
+            if (titleElement) {
+                moduleName =
+                    titleElement.textContent.trim();
+            }
+
+            /*
+             * Fallback:
+             * Look for sidebar title.
+             */
+
+            if (!moduleName) {
+
+                const sidebarHeader =
+                    headerLogo.closest(
+                        ".sidebar-header"
+                    );
+
+                if (sidebarHeader) {
+
+                    const text =
+                        sidebarHeader.textContent
+                            .trim();
+
+                    Object.keys(customIcons)
+                        .forEach((name) => {
+
+                            if (
+                                text.includes(name)
+                            ) {
+                                moduleName = name;
+                            }
+
+                        });
+
+                }
+
+            }
+
+            const imageUrl =
+                getIcon(moduleName);
+
+            if (!imageUrl) {
+                return;
+            }
+
+
+            /*
+             * If header-logo itself is IMG
+             */
+
+            if (
+                headerLogo.tagName === "IMG"
+            ) {
+
+                headerLogo.src =
+                    imageUrl;
+
+            }
+
+            /*
+             * If Frappe uses SVG/container
+             */
+
+            else {
+
+                headerLogo.innerHTML = "";
+
+                const image =
+                    document.createElement("img");
+
+                image.src =
+                    imageUrl;
+
+                image.alt =
+                    moduleName;
+
+                headerLogo.appendChild(
+                    image
+                );
+
+            }
+
+
+            headerLogo.dataset.customIconApplied =
+                "1";
+
             return;
         }
 
 
+        /*
+         * Some Frappe builds use icon-container
+         * instead of .header-logo.
+         */
+
+        const headerContainer =
+            document.querySelector(
+                ".sidebar-header .icon-container"
+            );
+
+        if (!headerContainer) {
+            return;
+        }
+
+
+        /*
+         * Get workspace title
+         */
+
+        const titleElement =
+            document.querySelector(
+                ".sidebar-item-label.header-title"
+            );
+
+        if (!titleElement) {
+            return;
+        }
+
+
+        const moduleName =
+            titleElement.textContent.trim();
+
         const imageUrl =
-            customIcons[name];
+            getIcon(moduleName);
 
         if (!imageUrl) {
             return;
@@ -88,38 +308,289 @@
 
 
         /*
-         * Find Frappe's icon container
+         * Remove default SVG
          */
 
-        const iconContainer =
-            desktopIcon.querySelector(".icon-container");
+        headerContainer.innerHTML = "";
 
-        if (!iconContainer) {
+
+        /*
+         * Add custom image
+         */
+
+        const image =
+            document.createElement("img");
+
+        image.src =
+            imageUrl;
+
+        image.alt =
+            moduleName;
+
+        headerContainer.appendChild(
+            image
+        );
+
+    }
+
+
+    /*
+     * ============================================================
+     * 3. GETTING STARTED POPUP ICON
+     * ============================================================
+     *
+     * Example:
+     *
+     *       Getting Started
+     *
+     *            [ BUYING ICON ]
+     *
+     *          Buying Setup
+     *
+     */
+
+    // function replaceGettingStartedIcon() {
+
+    //     /*
+    //      * Find "Getting Started"
+    //      */
+
+    //     const allElements =
+    //         document.querySelectorAll(
+    //             "div, section, article"
+    //         );
+
+
+    //     allElements.forEach((element) => {
+
+    //         const text =
+    //             element.textContent
+    //                 .trim()
+    //                 .replace(/\s+/g, " ");
+
+
+    //         /*
+    //          * We specifically need the popup
+    //          * containing Buying Setup.
+    //          */
+
+    //         if (
+    //             !text.includes("Getting Started") ||
+    //             !text.includes("Setup")
+    //         ) {
+    //             return;
+    //         }
+
+
+    //         /*
+    //          * Avoid selecting the entire page.
+    //          */
+
+    //         if (
+    //             element.children.length > 30
+    //         ) {
+    //             return;
+    //         }
+
+
+    //         /*
+    //          * Determine module name.
+    //          *
+    //          * Example:
+    //          * Buying Setup
+    //          */
+
+    //         let moduleName = null;
+
+
+    //         Object.keys(customIcons)
+    //             .forEach((name) => {
+
+    //                 if (
+    //                     text.includes(
+    //                         name + " Setup"
+    //                     )
+    //                 ) {
+
+    //                     moduleName = name;
+
+    //                 }
+
+    //             });
+
+
+    //         if (!moduleName) {
+    //             return;
+    //         }
+
+
+    //         const imageUrl =
+    //             getIcon(moduleName);
+
+    //         if (!imageUrl) {
+    //             return;
+    //         }
+
+
+    //         /*
+    //          * Find SVG inside popup.
+    //          */
+
+    //         const svg =
+    //             element.querySelector(
+    //                 "svg"
+    //             );
+
+
+    //         if (svg) {
+
+    //             /*
+    //              * Check whether this SVG is
+    //              * actually the large popup icon.
+    //              */
+
+    //             const rect =
+    //                 svg.getBoundingClientRect();
+
+
+    //             if (
+    //                 rect.width >= 30 &&
+    //                 rect.height >= 30
+    //             ) {
+
+    //                 /*
+    //                  * Don't replace twice
+    //                  */
+
+    //                 if (
+    //                     svg.dataset.customIconApplied ===
+    //                     "1"
+    //                 ) {
+    //                     return;
+    //                 }
+
+
+    //                 /*
+    //                  * Create image
+    //                  */
+
+    //                 const image =
+    //                     document.createElement("img");
+
+    //                 image.src =
+    //                     imageUrl;
+
+    //                 image.alt =
+    //                     moduleName;
+
+
+    //                 /*
+    //                  * Replace only the SVG.
+    //                  */
+
+    //                 svg.replaceWith(
+    //                     image
+    //                 );
+
+    //             }
+
+    //         }
+
+    //     });
+
+    // }
+function replaceGettingStartedIcon() {
+
+    /*
+     * Find all possible dialogs/popups
+     */
+
+    const containers = document.querySelectorAll(
+        '[role="dialog"], .modal, .drawer'
+    );
+
+    containers.forEach((container) => {
+
+        const text = container.textContent
+            .replace(/\s+/g, " ")
+            .trim();
+
+        /*
+         * Must be a Getting Started popup
+         */
+
+        if (!text.includes("Getting Started")) {
             return;
         }
 
 
         /*
-         * If our custom image already exists,
-         * don't create another one.
+         * Find which module this popup belongs to.
+         *
+         * Examples:
+         *
+         * Buying Setup
+         * Accounting Setup
+         * Assets Setup
+         * Selling Setup
          */
 
-        const existingCustomImage =
-            iconContainer.querySelector(
-                "img.custom-desktop-icon"
+        let moduleName = null;
+
+        Object.keys(customIcons).forEach((name) => {
+
+            const setupText = `${name} Setup`;
+
+            if (text.includes(setupText)) {
+                moduleName = name;
+            }
+
+        });
+
+
+        /*
+         * If module was not found, stop.
+         */
+
+        if (!moduleName) {
+            return;
+        }
+
+
+        /*
+         * Get corresponding image
+         */
+
+        const imageUrl =
+            customIcons[moduleName];
+
+        if (!imageUrl) {
+            return;
+        }
+
+
+        /*
+         * If our custom icon is already present,
+         * update it if necessary.
+         */
+
+        const existingImage =
+            container.querySelector(
+                ".custom-getting-started-icon"
             );
 
-        if (existingCustomImage) {
+        if (existingImage) {
 
             if (
-                existingCustomImage.getAttribute("src") !==
+                existingImage.getAttribute("src") !==
                 imageUrl
             ) {
 
-                existingCustomImage.setAttribute(
+                existingImage.setAttribute(
                     "src",
                     imageUrl
                 );
+
             }
 
             return;
@@ -127,68 +598,141 @@
 
 
         /*
-         * ========================================================
-         * REMOVE FRAPPE DEFAULT ICON
-         * ========================================================
-         *
-         * The previous code was APPENDING the image.
-         *
-         * That is why you were seeing:
-         *
-         * DEFAULT ICON + CUSTOM ICON
-         *
-         * Now we completely clear the visual icon container.
+         * Find SVG icons in the popup.
          */
 
-        iconContainer.innerHTML = "";
+        const svgs =
+            container.querySelectorAll("svg");
+
+
+        let targetIcon = null;
+
+
+        svgs.forEach((svg) => {
+
+            if (targetIcon) {
+                return;
+            }
+
+
+            const rect =
+                svg.getBoundingClientRect();
+
+
+            /*
+             * Getting Started module icon
+             * is normally much larger than
+             * close / expand / check icons.
+             */
+
+            if (
+                rect.width >= 40 &&
+                rect.height >= 40 &&
+                rect.width <= 120 &&
+                rect.height <= 120
+            ) {
+
+                targetIcon = svg;
+
+            }
+
+        });
 
 
         /*
-         * ========================================================
-         * CREATE CUSTOM IMAGE
-         * ========================================================
+         * If SVG wasn't found, look for
+         * existing image.
+         */
+
+        if (!targetIcon) {
+
+            const images =
+                container.querySelectorAll("img");
+
+
+            images.forEach((img) => {
+
+                if (targetIcon) {
+                    return;
+                }
+
+
+                const rect =
+                    img.getBoundingClientRect();
+
+
+                if (
+                    rect.width >= 40 &&
+                    rect.height >= 40 &&
+                    rect.width <= 120 &&
+                    rect.height <= 120
+                ) {
+
+                    /*
+                     * Don't replace our own image.
+                     */
+
+                    if (
+                        !img.classList.contains(
+                            "custom-getting-started-icon"
+                        )
+                    ) {
+
+                        targetIcon = img;
+
+                    }
+
+                }
+
+            });
+
+        }
+
+
+        if (!targetIcon) {
+            return;
+        }
+
+
+        /*
+         * Create custom image
          */
 
         const image =
             document.createElement("img");
 
         image.className =
-            "custom-desktop-icon";
-
-        image.alt =
-            name;
+            "custom-getting-started-icon";
 
         image.src =
             imageUrl;
 
+        image.alt =
+            moduleName;
+
 
         /*
-         * Add only our image
+         * Replace the original Frappe icon
          */
 
-        iconContainer.appendChild(image);
+        targetIcon.replaceWith(image);
 
-    }
-
+    });
+}
 
     /*
      * ============================================================
-     * REPLACE ALL DESKTOP ICONS
+     * RUN EVERYTHING
      * ============================================================
      */
 
-    function replaceIcons() {
+    function replaceAllIcons() {
 
-        const desktopIcons =
-            document.querySelectorAll(
-                ".desktop-icon[data-id]"
-            );
+        replaceDesktopIcons();
 
-        desktopIcons.forEach((desktopIcon) => {
+        replaceSidebarHeaderIcon();
 
-            replaceIcon(desktopIcon);
-
-        });
+        replaceGettingStartedIcon();
 
     }
 
@@ -201,23 +745,18 @@
 
     function start() {
 
-        /*
-         * Initial replacement
-         */
-
-        replaceIcons();
+        replaceAllIcons();
 
 
         /*
-         * Frappe creates desktop icons dynamically.
-         *
-         * Watch the desktop for newly created icons.
+         * Frappe is a SPA and dynamically
+         * creates the sidebar and popup.
          */
 
         const observer =
             new MutationObserver(() => {
 
-                replaceIcons();
+                replaceAllIcons();
 
             });
 
@@ -232,31 +771,35 @@
 
 
         /*
-         * Additional attempts after Frappe loads.
+         * Extra runs after page rendering.
          */
 
-        setTimeout(() => {
-            replaceIcons();
-        }, 500);
+        setTimeout(
+            replaceAllIcons,
+            500
+        );
 
-        setTimeout(() => {
-            replaceIcons();
-        }, 1500);
+        setTimeout(
+            replaceAllIcons,
+            1000
+        );
 
-        setTimeout(() => {
-            replaceIcons();
-        }, 3000);
+        setTimeout(
+            replaceAllIcons,
+            2000
+        );
+
+        setTimeout(
+            replaceAllIcons,
+            4000
+        );
 
     }
 
 
-    /*
-     * ============================================================
-     * DOM READY
-     * ============================================================
-     */
-
-    if (document.readyState === "loading") {
+    if (
+        document.readyState === "loading"
+    ) {
 
         document.addEventListener(
             "DOMContentLoaded",
