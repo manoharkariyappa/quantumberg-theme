@@ -11,7 +11,6 @@ app_include_css = [
      "/assets/custom_login/css/variables.css",
     # "/assets/custom_login/css/navbar.css",
       "/assets/custom_login/css/sidebar.css",
-    #   "/assets/custom_login/css/morphosis_theme.css",
     "/assets/custom_login/css/workspace.css",
      "/assets/custom_login/css/desk_sidebar.css",
      "/assets/custom_login/css/buttons.css",
@@ -23,7 +22,7 @@ app_include_css = [
     # "/assets/custom_login/css/kanban.css",
     # "/assets/custom_login/css/dashboard.css",
     # "/assets/custom_login/css/charts.css",
-    # "/assets/custom_login/css/misc.css",
+     "/assets/custom_login/css/misc.css",
     # "/assets/custom_login/css/erpnext_overrides.css",
 ]
 

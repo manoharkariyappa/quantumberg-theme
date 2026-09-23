@@ -89,3 +89,77 @@ body[data-route="desk"] .shortcut-widget-box:hover {
     border-radius: 14px !important;
 
 }
+
+
+/* =========================================================
+   QUANTUMBERG MODULE POPUP
+   COLOR ONLY - NO LAYOUT CHANGES
+========================================================= */
+
+/* Main popup */
+#desktop-modal .modal-content {
+    background: linear-gradient(
+        145deg,
+        #453D89 0%,
+        #673AB7 48%,
+        #C8499A 100%
+    ) !important;
+
+    border-color: transparent !important;
+}
+
+
+/* Header */
+#desktop-modal .desktop-modal-heading {
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+#desktop-modal .desktop-modal-heading * {
+    color: #FFFFFF !important;
+}
+
+
+/* Body */
+#desktop-modal .desktop-modal-body {
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+
+/* Container */
+#desktop-modal .icons-container {
+    background: transparent !important;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   REMOVE TILE BACKGROUNDS
+   This removes the clumsy star-shaped gaps.
+========================================================= */
+
+#desktop-modal .desktop-icon {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* Text */
+#desktop-modal .desktop-icon * {
+    color: #FFFFFF !important;
+}
+
+
+/* Hover - subtle color only */
+#desktop-modal .desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+/* Backdrop */
+.modal-backdrop.show {
+    background: #160C24 !important;
+    opacity: 0.70 !important;
+}

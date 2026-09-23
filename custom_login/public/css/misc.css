@@ -1,358 +1,856 @@
-/* ==========================================================
-   MORPHOSIS MISC COMPONENTS
-   Brand : #080226
-========================================================== */
+/* =========================================================
+   QUANTUMBERG ERPNext
+   STYLE 6 — RIGHT SIDE + FORM FIELDS + CHECKBOX FIX
+   =========================================================
 
-/* =====================================================
-   Page
-===================================================== */
+   SIDEBAR:
+   - Existing sidebar is NOT changed
 
-.page-head,
-.page-title,
-.page-head-content {
+   RIGHT SIDE:
+   - Soft Quantumberg purple/pink background
+   - White cards
+   - Purple/magenta accents
 
-    background: #080226 !important;
-    color: white !important;
+   FORM:
+   - Visible input fields
+   - Visible select/link fields
+   - Purple labels
+   - Magenta focus
+   - Working checkboxes
+========================================================= */
 
+
+/* =========================================================
+   QUANTUMBERG COLORS
+=========================================================
+
+   Dark Purple : #321247
+   Purple      : #453D89
+   Primary     : #54206F
+   Violet      : #673AB7
+   Magenta     : #B83C91
+   Pink        : #D84B9D
+========================================================= */
+
+
+/* =========================================================
+   1. RIGHT SIDE BACKGROUND
+========================================================= */
+
+.main-section {
+
+    background:
+        radial-gradient(
+            circle at 92% 0%,
+            rgba(216, 75, 157, 0.18),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 5% 100%,
+            rgba(103, 58, 183, 0.14),
+            transparent 38%
+        ),
+
+        linear-gradient(
+            135deg,
+            #F3EDF8 0%,
+            #FAF7FC 45%,
+            #FCEFF8 100%
+        ) !important;
 }
 
-.page-title * {
 
-    color: white !important;
+/* =========================================================
+   2. MAIN CONTENT
+========================================================= */
 
-}
-
-/* =====================================================
-   Breadcrumb
-===================================================== */
-
-.breadcrumb {
+.main-section .page-container,
+.main-section .page-content,
+.main-section .layout-main-section {
 
     background: transparent !important;
-
 }
 
-.breadcrumb-item,
-.breadcrumb-item a {
 
-    color: white !important;
+/* =========================================================
+   3. PAGE HEADER
+========================================================= */
 
+.main-section .page-head {
+
+    background:
+        rgba(255, 255, 255, 0.78) !important;
+
+    border-bottom:
+        1px solid rgba(84, 32, 111, 0.08) !important;
+
+    backdrop-filter:
+        blur(12px);
 }
 
-.breadcrumb-item.active {
 
-    color: #d7d7ea !important;
+/* Page title */
 
+.main-section .title-text {
+
+    color:
+        #321247 !important;
+
+    font-weight:
+        600 !important;
 }
 
-/* =====================================================
-   Tabs
-===================================================== */
 
-.nav-tabs {
+/* Breadcrumb */
 
-    border-bottom: 1px solid #32206d !important;
+.main-section .breadcrumb {
 
+    color:
+        #54206F !important;
 }
 
-.nav-tabs .nav-link {
 
-    color: #d6d6e8 !important;
+.main-section .breadcrumb a {
 
+    color:
+        #673AB7 !important;
 }
 
-.nav-tabs .nav-link:hover {
 
-    color: white !important;
+/* =========================================================
+   4. FORM AREA
+========================================================= */
 
+.main-section .form-layout {
+
+    background:
+        transparent !important;
 }
 
-.nav-tabs .nav-link.active {
 
-    background: #160844 !important;
+.main-section .form-page {
 
-    color: white !important;
-
-    border: 1px solid #32206d !important;
-
+    background:
+        transparent !important;
 }
 
-/* =====================================================
-   Pills
-===================================================== */
 
-.nav-pills .nav-link {
+/* =========================================================
+   5. FORM SECTION
+========================================================= */
 
-    color: white !important;
+.main-section .form-section {
 
+    background:
+        rgba(255, 255, 255, 0.35) !important;
 }
 
-.nav-pills .nav-link.active {
 
-    background: white !important;
+/* =========================================================
+   6. FORM SECTION HEADINGS
+========================================================= */
 
-    color: #080226 !important;
+.main-section .form-section .section-head,
+.main-section .form-section .section-head .section-title {
 
+    color:
+        #54206F !important;
+
+    font-weight:
+        600 !important;
 }
 
-/* =====================================================
-   Dropdown
-===================================================== */
 
-.dropdown-menu {
+/* =========================================================
+   7. FIELD LABELS
+========================================================= */
 
-    background: #12063d !important;
+.main-section .frappe-control .label,
+.main-section .frappe-control .control-label {
 
-    border: 1px solid #32206d !important;
+    color:
+        #54206F !important;
 
-    border-radius: 14px;
-
+    font-weight:
+        500 !important;
 }
 
-.dropdown-item {
 
-    color: white !important;
+/* Required star */
 
+.main-section .frappe-control .reqd {
+
+    color:
+        #C8499A !important;
 }
 
-.dropdown-item:hover {
 
-    background: #241062 !important;
+/* =========================================================
+   8. TEXT INPUTS
+========================================================= */
 
+.main-section input.form-control,
+.main-section textarea.form-control,
+.main-section select.form-control {
+
+    background:
+        #FFFFFF !important;
+
+    border:
+        1px solid #D8CBE2 !important;
+
+    border-radius:
+        8px !important;
+
+    color:
+        #321247 !important;
+
+    box-shadow:
+        none !important;
 }
 
-/* =====================================================
-   Tooltip
-===================================================== */
 
-.tooltip-inner {
+/* =========================================================
+   9. FRAPPE INPUT CONTROL
+========================================================= */
 
-    background: #160844 !important;
+.main-section .control-input {
 
-    color: white !important;
+    background:
+        #FFFFFF !important;
 
+    border:
+        1px solid #D8CBE2 !important;
+
+    border-radius:
+        8px !important;
+
+    box-shadow:
+        none !important;
 }
 
-.bs-tooltip-top .tooltip-arrow::before {
 
-    border-top-color: #160844 !important;
+/* Inputs inside Frappe control */
 
+.main-section .control-input input,
+.main-section .control-input textarea,
+.main-section .control-input select {
+
+    background:
+        #FFFFFF !important;
+
+    color:
+        #321247 !important;
+
+    border-color:
+        transparent !important;
+
+    box-shadow:
+        none !important;
 }
 
-/* =====================================================
-   Popover
-===================================================== */
 
-.popover {
+/* =========================================================
+   10. LINK FIELDS
+========================================================= */
 
-    background: #12063d !important;
+.main-section .link-field {
 
-    border: 1px solid #32206d !important;
+    background:
+        #FFFFFF !important;
 
+    border:
+        1px solid #D8CBE2 !important;
+
+    border-radius:
+        8px !important;
 }
 
-.popover-header {
 
-    background: #080226 !important;
+.main-section .link-field input {
 
-    color: white !important;
+    background:
+        #FFFFFF !important;
 
+    color:
+        #321247 !important;
+
+    border:
+        none !important;
 }
 
-.popover-body {
 
-    background: #12063d !important;
+/* =========================================================
+   11. INPUT WITH FEEDBACK
+========================================================= */
 
-    color: white !important;
+.main-section .input-with-feedback {
 
+    background:
+        #FFFFFF !important;
+
+    color:
+        #321247 !important;
 }
 
-/* =====================================================
-   Cards
-===================================================== */
 
-.card {
+/* =========================================================
+   12. SELECT FIELDS
+========================================================= */
 
-    background: #160844 !important;
+.main-section select {
 
-    border: 1px solid #32206d !important;
+    background-color:
+        #FFFFFF !important;
 
-    border-radius: 16px;
+    color:
+        #321247 !important;
 
+    border-color:
+        #D8CBE2 !important;
 }
 
-.card * {
 
-    color: white !important;
+/* =========================================================
+   13. READ ONLY VALUE
+========================================================= */
 
+.main-section .control-value {
+
+    color:
+        #321247 !important;
+
+    background:
+        transparent !important;
 }
 
-/* =====================================================
-   Badge
-===================================================== */
 
-.badge {
+/* =========================================================
+   14. PLACEHOLDER
+========================================================= */
 
-    background: #5642a5 !important;
+.main-section input::placeholder,
+.main-section textarea::placeholder,
+.main-section .form-control::placeholder {
 
-    color: white !important;
+    color:
+        #8D7A99 !important;
 
+    opacity:
+        1 !important;
 }
 
-/* =====================================================
-   Avatar
-===================================================== */
 
-.avatar {
+/* =========================================================
+   15. INPUT FOCUS
+========================================================= */
 
-    background: #32206d !important;
+.main-section input.form-control:focus,
+.main-section textarea.form-control:focus,
+.main-section select.form-control:focus,
+.main-section .control-input:focus-within,
+.main-section .link-field:focus-within {
 
-    color: white !important;
+    border-color:
+        #B83C91 !important;
 
+    box-shadow:
+        0 0 0 2px rgba(184, 60, 145, 0.12) !important;
+
+    outline:
+        none !important;
 }
 
-/* =====================================================
-   Notification
-===================================================== */
 
-.notifications-list,
-.notification-list {
+/* =========================================================
+   16. FORM PRIMARY BUTTON
+========================================================= */
 
-    background: #12063d !important;
+.main-section .btn-primary {
 
+    background:
+        linear-gradient(
+            90deg,
+            #54206F 0%,
+            #B83C91 100%
+        ) !important;
+
+    border-color:
+        transparent !important;
+
+    color:
+        #FFFFFF !important;
+
+    box-shadow:
+        0 5px 14px rgba(84, 32, 111, 0.18) !important;
 }
 
-.notification-item {
 
-    border-bottom: 1px solid #32206d !important;
+.main-section .btn-primary:hover {
 
+    background:
+        linear-gradient(
+            90deg,
+            #453D89 0%,
+            #C8499A 100%
+        ) !important;
+
+    color:
+        #FFFFFF !important;
 }
 
-.notification-item:hover {
 
-    background: #241062 !important;
+/* =========================================================
+   17. SECONDARY BUTTONS
+========================================================= */
 
+.main-section .btn-secondary,
+.main-section .btn-light {
+
+    background:
+        rgba(255, 255, 255, 0.90) !important;
+
+    border:
+        1px solid rgba(103, 58, 183, 0.15) !important;
+
+    color:
+        #54206F !important;
 }
 
-.notification-item * {
 
-    color: white !important;
+.main-section .btn-secondary:hover,
+.main-section .btn-light:hover {
 
+    background:
+        #F4EAF7 !important;
+
+    color:
+        #54206F !important;
 }
 
-/* =====================================================
-   Empty State
-===================================================== */
 
-.empty-state,
-.empty-state * {
+/* =========================================================
+   18. DASHBOARD / CHART CARDS
+========================================================= */
 
-    color: white !important;
+.main-section .widget,
+.main-section .dashboard-widget-box,
+.main-section .chart-container {
 
+    background:
+        rgba(255, 255, 255, 0.90) !important;
+
+    border:
+        1px solid rgba(84, 32, 111, 0.08) !important;
+
+    border-radius:
+        16px !important;
+
+    box-shadow:
+        0 8px 25px rgba(69, 61, 137, 0.07) !important;
 }
 
-/* =====================================================
-   Tags
-===================================================== */
 
-.tag,
-.tag-pill {
+/* =========================================================
+   19. BRAND LINE ON CARDS
+========================================================= */
 
-    background: #2d1b70 !important;
+.main-section .widget,
+.main-section .dashboard-widget-box {
 
-    color: white !important;
+    position:
+        relative;
 
+    overflow:
+        hidden;
 }
 
-/* =====================================================
-   Progress
-===================================================== */
 
-.progress {
+.main-section .widget::before,
+.main-section .dashboard-widget-box::before {
 
-    background: #2c1b73 !important;
+    content:
+        "";
 
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    height:
+        3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #453D89 0%,
+            #673AB7 50%,
+            #C8499A 100%
+        );
+
+    z-index:
+        2;
 }
 
-.progress-bar {
 
-    background: white !important;
+/* =========================================================
+   20. WIDGET TITLES
+========================================================= */
 
+.main-section .widget-title,
+.main-section .widget-label {
+
+    color:
+        #54206F !important;
+
+    font-weight:
+        600 !important;
 }
 
-/* =====================================================
-   Loader
-===================================================== */
 
-.spinner-border {
+/* =========================================================
+   21. SECTION TITLES
+========================================================= */
 
-    color: white !important;
+.main-section .section-title,
+.main-section .section-head,
+.main-section .section-head h3,
+.main-section .section-head h4 {
 
+    color:
+        #54206F !important;
 }
 
-/* =====================================================
-   Menu
-===================================================== */
 
-.menu-item {
+/* =========================================================
+   22. KPI VALUES
+========================================================= */
 
-    color: white !important;
+.main-section .number,
+.main-section .stat-value,
+.main-section .value {
 
+    color:
+        #321247 !important;
+
+    font-weight:
+        700 !important;
 }
 
-.menu-item:hover {
 
-    background: #241062 !important;
+/* =========================================================
+   23. LINKS
+========================================================= */
 
+.main-section a {
+
+    color:
+        #673AB7;
 }
 
-/* =====================================================
-   Timeline
-===================================================== */
 
-.timeline-item {
+.main-section a:hover {
 
-    background: #160844 !important;
-
-    border: 1px solid #32206d !important;
-
-    border-radius: 14px;
-
+    color:
+        #B83C91;
 }
 
-.timeline-item * {
 
-    color: white !important;
+/* =========================================================
+   24. LIST ROWS
+========================================================= */
 
+.main-section .list-row-container,
+.main-section .list-row {
+
+    background:
+        rgba(255, 255, 255, 0.84) !important;
+
+    border-color:
+        rgba(84, 32, 111, 0.07) !important;
 }
 
-/* =====================================================
-   Scrollbar
-===================================================== */
 
-::-webkit-scrollbar {
+.main-section .list-row:hover {
 
-    width: 10px;
-    height: 10px;
-
+    background:
+        #F8F1FA !important;
 }
 
-::-webkit-scrollbar-track {
 
-    background: #0d042f;
+/* =========================================================
+   25. TABLE HEADER
+========================================================= */
 
+.main-section .list-row-head {
+
+    background:
+        rgba(103, 58, 183, 0.06) !important;
+
+    color:
+        #54206F !important;
 }
 
-::-webkit-scrollbar-thumb {
 
-    background: #5642a5;
+/* =========================================================
+   26. CARDS
+========================================================= */
 
-    border-radius: 20px;
+.main-section .card {
 
+    background:
+        rgba(255, 255, 255, 0.88) !important;
+
+    border-color:
+        rgba(84, 32, 111, 0.08) !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
 
-    background: #6d58d3;
+/* =========================================================
+   27. DROPDOWN
+========================================================= */
 
+.main-section .dropdown-menu {
+
+    background:
+        #FFFFFF !important;
+
+    border-color:
+        rgba(84, 32, 111, 0.10) !important;
+
+    box-shadow:
+        0 12px 30px rgba(69, 61, 137, 0.15) !important;
+}
+
+
+.main-section .dropdown-item:hover {
+
+    background:
+        #F4EAF7 !important;
+
+    color:
+        #54206F !important;
+}
+
+
+/* =========================================================
+   28. BADGES
+========================================================= */
+
+.main-section .badge {
+
+    background:
+        #F1E5F5 !important;
+
+    color:
+        #54206F !important;
+}
+
+
+/* =========================================================
+   29. DIVIDERS
+========================================================= */
+
+.main-section hr {
+
+    border-color:
+        rgba(84, 32, 111, 0.08) !important;
+}
+
+
+/* =========================================================
+   30. CHECKBOX FIX
+========================================================= */
+
+/*
+   Restore the native checkbox appearance.
+   This makes the check mark visible when selected.
+*/
+
+.main-section input[type="checkbox"] {
+
+    appearance:
+        auto !important;
+
+    -webkit-appearance:
+        checkbox !important;
+
+    width:
+        18px !important;
+
+    height:
+        18px !important;
+
+    accent-color:
+        #673AB7 !important;
+
+    cursor:
+        pointer !important;
+
+    opacity:
+        1 !important;
+
+    visibility:
+        visible !important;
+}
+
+
+/* Checked state */
+
+.main-section input[type="checkbox"]:checked {
+
+    accent-color:
+        #B83C91 !important;
+
+    opacity:
+        1 !important;
+
+    visibility:
+        visible !important;
+}
+
+
+/* Checkbox wrapper */
+
+.main-section .checkbox {
+
+    opacity:
+        1 !important;
+
+    visibility:
+        visible !important;
+}
+
+
+/* Checkbox label */
+
+.main-section .checkbox label,
+.main-section .checkbox-label,
+.main-section .check-label {
+
+    color:
+        #321247 !important;
+
+    cursor:
+        pointer !important;
+}
+
+
+/* Frappe checkbox input */
+
+.main-section .checkbox input[type="checkbox"] {
+
+    appearance:
+        auto !important;
+
+    -webkit-appearance:
+        checkbox !important;
+
+    display:
+        inline-block !important;
+
+    opacity:
+        1 !important;
+
+    visibility:
+        visible !important;
+
+    accent-color:
+        #673AB7 !important;
+}
+
+
+/* Checked Frappe checkbox */
+
+.main-section .checkbox input[type="checkbox"]:checked {
+
+    accent-color:
+        #B83C91 !important;
+}
+
+
+/* =========================================================
+   31. CHECKBOX / SWITCH LABEL TEXT
+========================================================= */
+
+.main-section .checkbox label span,
+.main-section .checkbox label {
+
+    color:
+        #321247 !important;
+}
+
+
+/* =========================================================
+   32. RIGHT SIDE SCROLLBAR
+========================================================= */
+
+.main-section::-webkit-scrollbar {
+
+    width:
+        7px;
+}
+
+
+.main-section::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            180deg,
+            #673AB7,
+            #C8499A
+        );
+
+    border-radius:
+        10px;
+}
+
+
+.main-section::-webkit-scrollbar-track {
+
+    background:
+        rgba(103, 58, 183, 0.05);
+}
+
+
+/* =========================================================
+   33. MOBILE
+   Background only.
+   No layout/grid/width changes.
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .main-section {
+
+        background:
+            radial-gradient(
+                circle at 100% 0%,
+                rgba(216, 75, 157, 0.14),
+                transparent 40%
+            ),
+
+            linear-gradient(
+                135deg,
+                #F3EDF8 0%,
+                #FFFFFF 100%
+            ) !important;
+    }
+
+
+    .main-section .page-container,
+    .main-section .page-content,
+    .main-section .layout-main-section {
+
+        background:
+            transparent !important;
+    }
 }
