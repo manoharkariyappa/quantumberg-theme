@@ -298,3 +298,266 @@ body:has(.workspace) .workspace-shortcuts::-webkit-scrollbar-track {
         #453D89 !important;
 
 }
+
+/* ============================================================
+   QUANTUMBERG - NOTIFICATION PANEL TEXT FIX
+   Frappe / ERPNext v16
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Notification popup / panel
+   ------------------------------------------------------------ */
+
+.notifications-list,
+.notification-list,
+.notifications,
+.notification-list-container {
+    background: #ffffff !important;
+    color: #321247 !important;
+}
+
+
+/* ------------------------------------------------------------
+   2. Notification panel header / tabs
+   ------------------------------------------------------------ */
+
+.notifications-list .nav-tabs,
+.notification-list .nav-tabs,
+.notifications .nav-tabs,
+.notification-list-container .nav-tabs {
+    background: #ffffff !important;
+    color: #321247 !important;
+    border-color: #e5dcec !important;
+}
+
+
+/* Tab links */
+.notifications-list .nav-tabs .nav-link,
+.notification-list .nav-tabs .nav-link,
+.notifications .nav-tabs .nav-link,
+.notification-list-container .nav-tabs .nav-link {
+    color: #54206F !important;
+    background: transparent !important;
+    opacity: 1 !important;
+}
+
+
+/* Active tab */
+.notifications-list .nav-tabs .nav-link.active,
+.notification-list .nav-tabs .nav-link.active,
+.notifications .nav-tabs .nav-link.active,
+.notification-list-container .nav-tabs .nav-link.active {
+    color: #321247 !important;
+    background: #ffffff !important;
+    border-color: #54206F !important;
+    font-weight: 600 !important;
+}
+
+
+/* Hover */
+.notifications-list .nav-tabs .nav-link:hover,
+.notification-list .nav-tabs .nav-link:hover,
+.notifications .nav-tabs .nav-link:hover,
+.notification-list-container .nav-tabs .nav-link:hover {
+    color: #B83C91 !important;
+}
+
+
+/* ------------------------------------------------------------
+   3. Events / All / dropdown text
+   ------------------------------------------------------------ */
+
+.notifications-list button,
+.notification-list button,
+.notifications button,
+.notification-list-container button {
+    color: #321247 !important;
+    opacity: 1 !important;
+}
+
+
+/* Dropdown */
+.notifications-list .dropdown-toggle,
+.notification-list .dropdown-toggle,
+.notifications .dropdown-toggle,
+.notification-list-container .dropdown-toggle {
+    color: #321247 !important;
+    background: #ffffff !important;
+}
+
+
+/* Dropdown arrow */
+.notifications-list .dropdown-toggle::after,
+.notification-list .dropdown-toggle::after,
+.notifications .dropdown-toggle::after,
+.notification-list-container .dropdown-toggle::after {
+    color: #321247 !important;
+}
+
+
+/* ------------------------------------------------------------
+   4. Notification item text
+   ------------------------------------------------------------ */
+
+.notifications-list .notification-item,
+.notification-list .notification-item,
+.notifications .notification-item,
+.notification-list-container .notification-item {
+    color: #321247 !important;
+}
+
+
+/* Notification title */
+.notifications-list .subject-title,
+.notification-list .subject-title,
+.notifications .subject-title,
+.notification-list-container .subject-title {
+    color: #321247 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* Notification body */
+.notifications-list .notification-body,
+.notification-list .notification-body,
+.notifications .notification-body,
+.notification-list-container .notification-body {
+    color: #555555 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* Description */
+.notifications-list .notification-description,
+.notification-list .notification-description,
+.notifications .notification-description,
+.notification-list-container .notification-description {
+    color: #555555 !important;
+    opacity: 1 !important;
+}
+
+
+/* ------------------------------------------------------------
+   5. Generic text inside notification panel
+   ------------------------------------------------------------ */
+
+.notifications-list p,
+.notifications-list span,
+.notifications-list div,
+
+.notification-list p,
+.notification-list span,
+.notification-list div,
+
+.notifications p,
+.notifications span,
+.notifications div,
+
+.notification-list-container p,
+.notification-list-container span,
+.notification-list-container div {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* ------------------------------------------------------------
+   6. Specifically override inherited sidebar WHITE text
+   ------------------------------------------------------------ */
+
+.body-sidebar .notifications-list *,
+.body-sidebar .notification-list *,
+.body-sidebar .notifications *,
+.body-sidebar .notification-list-container * {
+    color: #321247 !important;
+}
+
+
+/* Keep muted text readable */
+.body-sidebar .notifications-list .text-muted,
+.body-sidebar .notification-list .text-muted,
+.body-sidebar .notifications .text-muted,
+.body-sidebar .notification-list-container .text-muted {
+    color: #777777 !important;
+}
+
+
+/* ------------------------------------------------------------
+   7. Links
+   ------------------------------------------------------------ */
+
+.notifications-list a,
+.notification-list a,
+.notifications a,
+.notification-list-container a {
+    color: #54206F !important;
+}
+
+
+/* ------------------------------------------------------------
+   8. Empty notification / Events message
+   ------------------------------------------------------------ */
+
+.notifications-list .empty-state,
+.notification-list .empty-state,
+.notifications .empty-state,
+.notification-list-container .empty-state {
+    color: #321247 !important;
+}
+
+
+.notifications-list .empty-state p,
+.notification-list .empty-state p,
+.notifications .empty-state p,
+.notification-list-container .empty-state p {
+    color: #54206F !important;
+}
+
+
+/* ------------------------------------------------------------
+   9. Notification panel icons
+   ------------------------------------------------------------ */
+
+.notifications-list svg,
+.notification-list svg,
+.notifications svg,
+.notification-list-container svg {
+    color: #54206F !important;
+    stroke: #54206F !important;
+}
+
+
+/* ------------------------------------------------------------
+   10. Notification panel header text
+   ------------------------------------------------------------ */
+
+.notifications-list h1,
+.notifications-list h2,
+.notifications-list h3,
+.notifications-list h4,
+
+.notification-list h1,
+.notification-list h2,
+.notification-list h3,
+.notification-list h4,
+
+.notifications h1,
+.notifications h2,
+.notifications h3,
+.notifications h4 {
+    color: #321247 !important;
+}
+
+
+/* ------------------------------------------------------------
+   11. Prevent transparent text
+   ------------------------------------------------------------ */
+
+.notifications-list *,
+.notification-list *,
+.notifications *,
+.notification-list-container * {
+    text-shadow: none !important;
+}
