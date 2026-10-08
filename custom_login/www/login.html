@@ -73,7 +73,8 @@ body{
     width:100%;
     max-width:960px;
     min-height:0;
-    height:min(590px, calc(100vh - 40px));
+    height:auto;
+    min-height:min(590px, calc(100vh - 40px));
     display:grid;
     grid-template-columns:43% 57%;
     overflow:hidden;
@@ -222,9 +223,9 @@ body{
 .login-right{
     position:relative;
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     justify-content:center;
-    padding:26px 26px;
+    padding:40px 30px 48px;
     background:#fff;
     box-sizing:border-box;
 }
@@ -519,7 +520,8 @@ body{
     }
 
     .login-container{
-        height:min(600px,calc(100vh - 32px));
+        height:auto;
+        min-height:600px;
         max-width:900px;
         grid-template-columns:42% 58%;
     }
@@ -537,7 +539,7 @@ body{
     }
 
     .login-right{
-        padding:28px 42px;
+        padding:38px 34px 48px;
     }
 }
 
@@ -545,6 +547,7 @@ body{
     .login-page{
         min-height:100vh;
         padding:0;
+        align-items:flex-start;
         background:#fff;
     }
 
@@ -555,6 +558,7 @@ body{
         min-height:100vh;
         border-radius:0;
         box-shadow:none;
+        overflow:visible;
     }
 
     .login-left{
@@ -563,7 +567,14 @@ body{
 
     .login-right{
         min-height:100vh;
-        padding:34px 24px 55px;
+        height:auto;
+        padding:34px 24px 70px;
+        align-items:flex-start;
+    }
+
+    .auth-wrapper{
+        width:100%;
+        max-width:520px;
     }
 
     .mobile-logo{
@@ -589,14 +600,74 @@ body{
     }
 
     .login-right::after{
+        left:18px;
         right:18px;
-        bottom:13px;
+        bottom:14px;
+        text-align:center;
+    }
+}
+
+@media(max-width:480px){
+    .forgot-method-switch{
+        gap:5px;
+        padding:3px;
+        margin-bottom:16px;
+    }
+
+    .forgot-method-btn{
+        height:40px;
+        font-size:12px;
+    }
+
+    .btn-whatsapp-forgot,
+    .btn-whatsapp-reset{
+        height:46px;
+        font-size:13px!important;
     }
 }
 
 @media(max-width:480px){
     .login-right{
-        padding:28px 18px 52px;
+        padding:28px 16px 52px;
+    }
+
+    .signup-method-switch{
+        gap:5px;
+        padding:3px;
+        margin-bottom:16px;
+    }
+
+    .signup-method-btn{
+        height:40px;
+        font-size:12px;
+    }
+
+    .login-page .field-label{
+        font-size:12px;
+    }
+
+    .input-container .form-control{
+        height:46px;
+        padding-left:42px;
+        padding-right:44px;
+        font-size:14px;
+    }
+
+    .btn-whatsapp-signup,
+    .btn-whatsapp-verify{
+        height:46px;
+        font-size:13px !important;
+    }
+
+    .whatsapp-otp-info{
+        font-size:11px;
+    }
+
+    .login-right::after{
+        left:16px;
+        right:16px;
+        text-align:center;
+        font-size:8px;
     }
 
     .auth-wrapper{
@@ -627,8 +698,9 @@ body{
     }
 
     .login-container{
-        height:calc(100vh - 24px);
-        max-height:610px;
+        height:auto;
+        min-height:590px;
+        max-height:none;
     }
 
     .login-left{
@@ -678,6 +750,271 @@ body{
         margin-bottom:16px;
     }
 }
+
+
+
+/* =========================
+   FIELD VALIDATION
+   ========================= */
+
+.field-error{
+    display:none;
+    margin-top:5px;
+    color:#c62828;
+    font-size:11px;
+    line-height:1.35;
+}
+
+.field-error.show{
+    display:block;
+}
+
+.login-page .form-control.field-invalid,
+.login-page .input-container .form-control.field-invalid{
+    border-color:#dc3545!important;
+    box-shadow:0 0 0 3px rgba(220,53,69,.08)!important;
+}
+
+.login-page .form-control.field-valid{
+    border-color:#42a56a!important;
+}
+
+/* =========================
+   FORGOT PASSWORD METHOD SWITCH
+   ========================= */
+
+.forgot-method-switch{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-bottom:20px;
+    padding:4px;
+    background:#f7f3f9;
+    border-radius:10px;
+}
+
+.forgot-method-btn{
+    height:42px;
+    border:0;
+    border-radius:8px;
+    background:transparent;
+    color:#75657D;
+    font-size:13px;
+    font-weight:650;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.forgot-method-btn.active{
+    background:#fff;
+    color:#453D89;
+    box-shadow:0 3px 10px rgba(69,61,137,.12);
+}
+
+.forgot-method-btn:hover{
+    color:#453D89;
+}
+
+.forgot-email-section,
+.forgot-whatsapp-section{
+    width:100%;
+}
+
+.forgot-whatsapp-section{
+    display:none;
+}
+
+.whatsapp-forgot-form{
+    width:100%;
+}
+
+.whatsapp-forgot-message{
+    display:none;
+    margin-top:12px;
+    padding:10px 12px;
+    border-radius:8px;
+    font-size:12px;
+    line-height:1.45;
+}
+
+.whatsapp-forgot-message.success{
+    display:block;
+    background:#eefaf3;
+    color:#18794e;
+}
+
+.whatsapp-forgot-message.error{
+    display:block;
+    background:#fff0f0;
+    color:#c62828;
+}
+
+.whatsapp-forgot-otp-group{
+    display:none;
+}
+
+.btn-whatsapp-forgot,
+.btn-whatsapp-reset{
+    width:100%;
+    height:48px;
+    border:0!important;
+    border-radius:9px!important;
+    background:linear-gradient(135deg,#453D89 0%,#7b2d87 52%,#c33d91 100%)!important;
+    color:#fff!important;
+    font-size:14px!important;
+    font-weight:700!important;
+    box-shadow:0 8px 20px rgba(69,61,137,.22);
+    cursor:pointer;
+    transition:transform .2s,box-shadow .2s;
+}
+
+.btn-whatsapp-forgot:hover,
+.btn-whatsapp-reset:hover{
+    transform:translateY(-1px);
+    box-shadow:0 11px 24px rgba(69,61,137,.27);
+}
+
+.whatsapp-forgot-resend{
+    margin-top:12px;
+    text-align:center;
+}
+
+.whatsapp-forgot-resend button{
+    border:0;
+    background:transparent;
+    color:#453D89;
+    font-size:12px;
+    font-weight:650;
+    cursor:pointer;
+}
+
+/* =========================
+   SIGNUP METHOD SWITCH
+   ========================= */
+
+.signup-method-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 4px;
+    background: #f7f3f9;
+    border-radius: 10px;
+}
+
+.signup-method-btn {
+    height: 42px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #75657D;
+    font-size: 13px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.signup-method-btn.active {
+    background: #fff;
+    color: #453D89;
+    box-shadow: 0 3px 10px rgba(69,61,137,.12);
+}
+
+.signup-method-btn:hover {
+    color: #453D89;
+}
+
+.signup-email-section,
+.signup-whatsapp-section {
+    width: 100%;
+}
+
+.signup-whatsapp-section {
+    display: none;
+}
+
+.whatsapp-signup-form {
+    width: 100%;
+}
+
+.whatsapp-signup-form .form-group {
+    margin-bottom: 15px;
+}
+
+.whatsapp-otp-group {
+    display: none;
+}
+
+.whatsapp-otp-info {
+    margin: 0 0 15px;
+    color: #75657D;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.whatsapp-signup-message {
+    display: none;
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.whatsapp-signup-message.success {
+    display: block;
+    background: #eefaf3;
+    color: #18794e;
+}
+
+.whatsapp-signup-message.error {
+    display: block;
+    background: #fff0f0;
+    color: #c62828;
+}
+
+.btn-whatsapp-signup,
+.btn-whatsapp-verify {
+    width: 100%;
+    height: 48px;
+    border: 0 !important;
+    border-radius: 9px !important;
+    background: linear-gradient(135deg,#453D89 0%,#7b2d87 52%,#c33d91 100%) !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 8px 20px rgba(69,61,137,.22);
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.btn-whatsapp-signup:hover,
+.btn-whatsapp-verify:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 11px 24px rgba(69,61,137,.27);
+}
+
+.whatsapp-resend {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.whatsapp-resend button {
+    border: 0;
+    background: transparent;
+    color: #453D89;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+
+/* Required field indicator for WhatsApp Signup */
+.whatsapp-signup-form .required-star {
+    color: #dc3545 !important;
+    font-weight: 700;
+    margin-left: 3px;
+}
+
 </style>
 
 {% endblock %}
@@ -725,7 +1062,7 @@ body{
     <div class="form-group">
 
         <label class="field-label" for="login_password">
-            {{ _("Password") }}
+            {{ _("Password") }}<span class="required-star" aria-hidden="true">*</span>
         </label>
 
         <div class="password-field input-container">
@@ -815,8 +1152,8 @@ body{
     <div class="login-container">
 
         <!-- =====================================================
-		     LEFT BRAND PANEL
-		====================================================== -->
+                     LEFT BRAND PANEL
+                ====================================================== -->
 
         <div class="login-left">
 
@@ -880,8 +1217,8 @@ body{
 
 
         <!-- =====================================================
-		     RIGHT AUTH PANEL
-		====================================================== -->
+                     RIGHT AUTH PANEL
+                ====================================================== -->
 
         <div class="login-right">
 
@@ -900,8 +1237,8 @@ body{
 
 
                 <!-- =================================================
-				     LOGIN
-				================================================== -->
+                                     LOGIN
+                                ================================================== -->
 
                 <section class="for-login">
 
@@ -1027,8 +1364,8 @@ body{
 
 
                 <!-- =================================================
-				     EMAIL LOGIN
-				================================================== -->
+                                     EMAIL LOGIN
+                                ================================================== -->
 
                 {% if social_login %}
 
@@ -1060,20 +1397,244 @@ body{
 
 
                 <!-- =================================================
-				     SIGNUP
-				================================================== -->
+                                     SIGNUP
+                                ================================================== -->
 
                 <section class="for-signup {{ 'signup-disabled' if disable_signup else '' }}">
 
                     {{ auth_heading(
                     "Create your account",
-                    "Enter your information to get started"
+                    "Choose how you want to create your account"
                     ) }}
-
 
                     {% if not disable_signup %}
 
-                    {{ signup_form_template }}
+                    <!-- SIGNUP METHOD -->
+                    <div class="signup-method-switch">
+
+                        <button
+                            type="button"
+                            class="signup-method-btn active"
+                            id="signup-email-btn">
+                            {{ _("Email") }}
+                        </button>
+
+                        <button
+                            type="button"
+                            class="signup-method-btn"
+                            id="signup-whatsapp-btn">
+                            {{ _("WhatsApp") }}
+                        </button>
+
+                    </div>
+
+
+                    <!-- EMAIL SIGNUP -->
+                    <div
+                        class="signup-email-section"
+                        id="signup-email-section">
+
+                        {{ signup_form_template }}
+
+                    </div>
+
+
+                    <!-- WHATSAPP SIGNUP -->
+                    <div
+                        class="signup-whatsapp-section"
+                        id="signup-whatsapp-section">
+
+                        <form
+                            id="whatsapp-signup-form"
+                            class="whatsapp-signup-form"
+                            novalidate>
+
+                            <div class="form-group">
+
+                                <label
+                                    class="field-label"
+                                    for="whatsapp_signup_mobile">
+                                    {{ _("WhatsApp Mobile Number") }}<span class="required-star" aria-hidden="true">*</span>
+                                </label>
+
+                                <div class="input-container">
+
+                                    <span class="input-icon">
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                                                19.79 19.79 0 0 1-8.63-3.07
+                                                19.5 19.5 0 0 1-6-6
+                                                19.79 19.79 0 0 1-3.07-8.67
+                                                A2 2 0 0 1 4.11 2h3
+                                                a2 2 0 0 1 2 1.72
+                                                12.84 12.84 0 0 0 .7 2.81
+                                                2 2 0 0 1-.45 2.11L8.09 9.91
+                                                a16 16 0 0 0 6 6l1.27-1.27
+                                                a2 2 0 0 1 2.11-.45
+                                                12.84 12.84 0 0 0 2.81.7
+                                                A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg>
+                                    </span>
+
+                                    <input
+                                        type="tel"
+                                        id="whatsapp_signup_mobile"
+                                        class="form-control"
+                                        placeholder="+91XXXXXXXXXX"
+                                        autocomplete="tel">
+
+                                </div>
+
+                                <span id="error-whatsapp_signup_mobile" class="field-error"></span>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="btn btn-whatsapp-signup"
+                                id="whatsapp-send-otp">
+                                {{ _("Send OTP on WhatsApp") }}
+                            </button>
+
+
+                            <div
+                                class="whatsapp-otp-group"
+                                id="whatsapp-otp-group">
+
+                                <p class="whatsapp-otp-info">
+                                    {{ _("Enter your details and the OTP sent to your WhatsApp number.") }}
+                                </p>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_signup_first_name">
+                                        {{ _("First Name") }}<span class="required-star" aria-hidden="true">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="whatsapp_signup_first_name"
+                                        class="form-control"
+                                        placeholder="{{ _('Enter your first name') }}">
+
+                                    <span id="error-whatsapp_signup_first_name" class="field-error"></span>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_signup_last_name">
+                                        {{ _("Last Name") }}
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="whatsapp_signup_last_name"
+                                        class="form-control"
+                                        placeholder="{{ _('Enter your last name') }}">
+
+                                    <span id="error-whatsapp_signup_last_name" class="field-error"></span>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_signup_email">
+                                        {{ _("Email Address (Optional)") }}
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="whatsapp_signup_email"
+                                        class="form-control"
+                                        placeholder="{{ _('Enter your email address') }}"
+                                        autocomplete="email">
+
+                                    <span id="error-whatsapp_signup_email" class="field-error"></span>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_signup_password">
+                                        {{ _("Password") }}<span class="required-star" aria-hidden="true">*</span>
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="whatsapp_signup_password"
+                                        class="form-control"
+                                        placeholder="{{ _('Create a password') }}"
+                                        autocomplete="new-password">
+
+                                    <span id="error-whatsapp_signup_password" class="field-error"></span>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_signup_otp">
+                                        {{ _("Verification Code") }}<span class="required-star" aria-hidden="true">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="whatsapp_signup_otp"
+                                        class="form-control"
+                                        maxlength="6"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{6}"
+                                        placeholder="{{ _('Enter 6-digit OTP') }}"
+                                        autocomplete="one-time-code">
+
+                                    <span id="error-whatsapp_signup_otp" class="field-error"></span>
+
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-whatsapp-verify"
+                                    id="whatsapp-verify-otp">
+                                    {{ _("Verify OTP & Create Account") }}
+                                </button>
+
+                                <div class="whatsapp-resend">
+                                    <button
+                                        type="button"
+                                        id="whatsapp-resend-otp">
+                                        {{ _("Resend OTP") }}
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                id="whatsapp-signup-message"
+                                class="whatsapp-signup-message">
+                            </div>
+
+                        </form>
+
+                    </div>
 
                     {% else %}
 
@@ -1084,9 +1645,7 @@ body{
                         </p>
 
                         <a href="/" class="btn btn-primary">
-
                             {{ _("Home") }}
-
                         </a>
 
                     </div>
@@ -1104,68 +1663,276 @@ body{
 
                 </section>
 
-
                 <!-- =================================================
-				     FORGOT PASSWORD
-				================================================== -->
+                                     FORGOT PASSWORD
+                                ================================================== -->
 
                 <section class="for-forgot">
 
                     {{ auth_heading(
                     "Forgot Password?",
-                    "Enter your email address and we'll send you a reset link"
+                    "Reset your password using Email or WhatsApp"
                     ) }}
 
+                    <div class="forgot-method-switch">
 
-                    <form class="form-signin form-forgot" role="form">
+                        <button
+                            type="button"
+                            class="forgot-method-btn active"
+                            id="forgot-email-btn">
+                            {{ _("Email") }}
+                        </button>
 
-                        <div class="page-card-body">
+                        <button
+                            type="button"
+                            class="forgot-method-btn"
+                            id="forgot-whatsapp-btn">
+                            {{ _("WhatsApp") }}
+                        </button>
 
-                            <div class="form-group">
+                    </div>
 
-                                <label class="field-label" for="forgot_email">
+                    <!-- EMAIL FORGOT PASSWORD -->
 
-                                    {{ _("Email Address") }}
+                    <div
+                        class="forgot-email-section"
+                        id="forgot-email-section">
 
-                                </label>
+                        <form class="form-signin form-forgot" role="form">
 
+                            <div class="page-card-body">
 
-                                <div class="email-field input-container">
+                                <div class="form-group">
 
-                                    <span class="input-icon">
+                                    <label class="field-label" for="forgot_email">
+                                        {{ _("Email Address") }}
+                                    </label>
 
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <div class="email-field input-container">
 
-                                            <path d="M4 4h16v16H4z"></path>
-                                            <path d="M4 6l8 6 8-6"></path>
+                                        <span class="input-icon">
 
-                                        </svg>
+                                            <svg viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2">
 
-                                    </span>
+                                                <path d="M4 4h16v16H4z"></path>
+                                                <path d="M4 6l8 6 8-6"></path>
 
+                                            </svg>
 
-                                    <input type="email" id="forgot_email" class="form-control"
-                                        placeholder="{{ _('Enter your email address') }}" required
-                                        autocomplete="username">
+                                        </span>
+
+                                        <input
+                                            type="email"
+                                            id="forgot_email"
+                                            class="form-control"
+                                            placeholder="{{ _('Enter your email address') }}"
+                                            required
+                                            autocomplete="username">
+
+                                    </div>
 
                                 </div>
 
                             </div>
 
-                        </div>
+                            <div class="page-card-actions">
+
+                                <button
+                                    class="btn btn-primary btn-forgot"
+                                    type="submit">
+
+                                    {{ _("Reset Password") }}
+
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
 
 
-                        <div class="page-card-actions">
+                    <!-- WHATSAPP FORGOT PASSWORD -->
 
-                            <button class="btn btn-primary btn-forgot" type="submit">
+                    <div
+                        class="forgot-whatsapp-section"
+                        id="forgot-whatsapp-section">
 
-                                {{ _("Reset Password") }}
+                        <form
+                            id="whatsapp-forgot-form"
+                            class="whatsapp-forgot-form"
+                            novalidate>
+
+                            <div class="form-group">
+
+                                <label
+                                    class="field-label"
+                                    for="whatsapp_forgot_mobile">
+
+                                    {{ _("WhatsApp Mobile Number") }}
+
+                                </label>
+
+                                <div class="input-container">
+
+                                    <span class="input-icon">
+
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round">
+
+                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                                                19.79 19.79 0 0 1-8.63-3.07
+                                                19.5 19.5 0 0 1-6-6
+                                                19.79 19.79 0 0 1-3.07-8.67
+                                                A2 2 0 0 1 4.11 2h3
+                                                a2 2 0 0 1 2 1.72
+                                                12.84 12.84 0 0 0 .7 2.81
+                                                2 2 0 0 1-.45 2.11L8.09 9.91
+                                                a16 16 0 0 0 6 6l1.27-1.27
+                                                a2 2 0 0 1 2.11-.45
+                                                12.84 12.84 0 0 0 2.81.7
+                                                A2 2 0 0 1 22 16.92z">
+                                            </path>
+
+                                        </svg>
+
+                                    </span>
+
+                                    <input
+                                        type="tel"
+                                        id="whatsapp_forgot_mobile"
+                                        class="form-control"
+                                        placeholder="+91XXXXXXXXXX"
+                                        autocomplete="tel">
+
+                                </div>
+
+                                <span id="error-whatsapp_forgot_mobile" class="field-error"></span>
+
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn btn-whatsapp-forgot"
+                                id="whatsapp-forgot-send-otp">
+
+                                {{ _("Send OTP on WhatsApp") }}
 
                             </button>
 
-                        </div>
 
-                    </form>
+                            <div
+                                class="whatsapp-forgot-otp-group"
+                                id="whatsapp-forgot-otp-group">
+
+                                <p class="whatsapp-otp-info">
+                                    {{ _("Enter the OTP sent to your WhatsApp number and choose a new password.") }}
+                                </p>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_forgot_otp">
+
+                                        {{ _("Verification Code") }}
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="whatsapp_forgot_otp"
+                                        class="form-control"
+                                        maxlength="6"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{6}"
+                                        placeholder="{{ _('Enter 6-digit OTP') }}"
+                                        autocomplete="one-time-code">
+
+                                    <span id="error-whatsapp_forgot_otp" class="field-error"></span>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_forgot_password">
+
+                                        {{ _("New Password") }}
+
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="whatsapp_forgot_password"
+                                        class="form-control"
+                                        placeholder="{{ _('Enter your new password') }}"
+                                        autocomplete="new-password">
+
+                                    <span id="error-whatsapp_forgot_password" class="field-error"></span>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label
+                                        class="field-label"
+                                        for="whatsapp_forgot_confirm_password">
+
+                                        {{ _("Confirm Password") }}
+
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="whatsapp_forgot_confirm_password"
+                                        class="form-control"
+                                        placeholder="{{ _('Confirm your new password') }}"
+                                        autocomplete="new-password">
+
+                                    <span id="error-whatsapp_forgot_confirm_password" class="field-error"></span>
+
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-whatsapp-reset"
+                                    id="whatsapp-reset-password">
+
+                                    {{ _("Verify OTP & Reset Password") }}
+
+                                </button>
+
+                                <div class="whatsapp-forgot-resend">
+
+                                    <button
+                                        type="button"
+                                        id="whatsapp-forgot-resend-otp">
+
+                                        {{ _("Resend OTP") }}
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div
+                                id="whatsapp-forgot-message"
+                                class="whatsapp-forgot-message">
+                            </div>
+
+                        </form>
+
+                    </div>
 
 
                     <div class="auth-back-link">
@@ -1180,8 +1947,8 @@ body{
 
 
                 <!-- =================================================
-				     EMAIL LINK LOGIN
-				================================================== -->
+                                     EMAIL LINK LOGIN
+                                ================================================== -->
 
                 <section class="for-login-with-email-link">
 
@@ -1268,6 +2035,961 @@ body{
 
 <script>
     {% include "templates/includes/login/login.js" %}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const forgotEmailButton = document.getElementById("forgot-email-btn");
+    const forgotWhatsappButton = document.getElementById("forgot-whatsapp-btn");
+    const forgotEmailSection = document.getElementById("forgot-email-section");
+    const forgotWhatsappSection = document.getElementById("forgot-whatsapp-section");
+
+    const forgotWhatsappForm = document.getElementById("whatsapp-forgot-form");
+    const forgotMobileInput = document.getElementById("whatsapp_forgot_mobile");
+    const forgotSendOtpButton = document.getElementById("whatsapp-forgot-send-otp");
+    const forgotOtpGroup = document.getElementById("whatsapp-forgot-otp-group");
+    const forgotOtpInput = document.getElementById("whatsapp_forgot_otp");
+    const forgotPasswordInput = document.getElementById("whatsapp_forgot_password");
+    const forgotConfirmPasswordInput = document.getElementById("whatsapp_forgot_confirm_password");
+    const forgotResetButton = document.getElementById("whatsapp-reset-password");
+    const forgotResendButton = document.getElementById("whatsapp-forgot-resend-otp");
+    const forgotMessageBox = document.getElementById("whatsapp-forgot-message");
+
+    if (!forgotEmailButton || !forgotWhatsappButton || !forgotWhatsappForm) {
+        return;
+    }
+
+    function clearFieldError(input) {
+        if (!input) return;
+
+        input.classList.remove("field-invalid");
+
+        const error = document.getElementById("error-" + input.id);
+
+        if (error) {
+            error.textContent = "";
+            error.classList.remove("show");
+        }
+    }
+
+    function setFieldError(input, message) {
+        if (!input) return;
+
+        input.classList.add("field-invalid");
+
+        const error = document.getElementById("error-" + input.id);
+
+        if (error) {
+            error.textContent = message;
+            error.classList.add("show");
+        }
+    }
+
+    function clearAllForgotErrors() {
+        [
+            forgotMobileInput,
+            forgotOtpInput,
+            forgotPasswordInput,
+            forgotConfirmPasswordInput
+        ].forEach(clearFieldError);
+    }
+
+    function forgotShowMessage(message, type) {
+        forgotMessageBox.textContent = message || "";
+        forgotMessageBox.className =
+            "whatsapp-forgot-message " + (type || "");
+    }
+
+    function cleanServerMessage(message) {
+        if (!message) return "";
+
+        const holder = document.createElement("div");
+        holder.innerHTML = String(message);
+
+        return (holder.textContent || holder.innerText || "")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    function forgotServerMessage(result, fallback) {
+        let message = "";
+
+        if (result && result.message) {
+            if (typeof result.message === "string") {
+                message = result.message;
+            } else if (result.message.message) {
+                message = result.message.message;
+            }
+        }
+
+        if (!message && result && result._server_messages) {
+            try {
+                const messages = JSON.parse(result._server_messages);
+
+                if (messages.length) {
+                    const parsed = JSON.parse(messages[0]);
+
+                    if (parsed.message) {
+                        message = parsed.message;
+                    }
+                }
+            } catch (e) {
+                console.error("Unable to parse server message", e);
+            }
+        }
+
+        return cleanServerMessage(message) || fallback;
+    }
+
+    function showEmailForgot() {
+        forgotEmailButton.classList.add("active");
+        forgotWhatsappButton.classList.remove("active");
+
+        forgotEmailSection.style.display = "block";
+        forgotWhatsappSection.style.display = "none";
+    }
+
+    function showWhatsappForgot() {
+        forgotWhatsappButton.classList.add("active");
+        forgotEmailButton.classList.remove("active");
+
+        forgotEmailSection.style.display = "none";
+        forgotWhatsappSection.style.display = "block";
+    }
+
+    forgotEmailButton.addEventListener("click", showEmailForgot);
+    forgotWhatsappButton.addEventListener("click", showWhatsappForgot);
+
+    forgotMobileInput.addEventListener("input", function () {
+        clearFieldError(forgotMobileInput);
+        this.value = this.value.replace(/[^\d+]/g, "");
+    });
+
+    forgotOtpInput.addEventListener("input", function () {
+        clearFieldError(forgotOtpInput);
+        this.value = this.value.replace(/\D/g, "").slice(0, 6);
+    });
+
+    forgotPasswordInput.addEventListener("input", function () {
+        clearFieldError(forgotPasswordInput);
+    });
+
+    forgotConfirmPasswordInput.addEventListener("input", function () {
+        clearFieldError(forgotConfirmPasswordInput);
+    });
+
+    forgotWhatsappForm.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        clearAllForgotErrors();
+        forgotShowMessage("", "");
+
+        const mobile = forgotMobileInput.value.trim();
+
+        if (!mobile) {
+            setFieldError(
+                forgotMobileInput,
+                "WhatsApp mobile number is required."
+            );
+            forgotMobileInput.focus();
+            return;
+        }
+
+        const digits = mobile.replace(/\D/g, "");
+
+        if (digits.length < 10 || digits.length > 15) {
+            setFieldError(
+                forgotMobileInput,
+                "Enter a valid mobile number with country code."
+            );
+            forgotMobileInput.focus();
+            return;
+        }
+
+        forgotSendOtpButton.disabled = true;
+        forgotSendOtpButton.textContent = "Sending OTP...";
+
+        try {
+
+            const response = await fetch(
+                "/api/method/custom_login.api.whatsapp_signup.send_forgot_password_otp",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        mobile: mobile
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (
+                response.ok &&
+                result.message &&
+                result.message.success
+            ) {
+
+                forgotShowMessage(
+                    "OTP sent successfully to your WhatsApp.",
+                    "success"
+                );
+
+                forgotOtpGroup.style.display = "block";
+                forgotMobileInput.readOnly = true;
+                forgotSendOtpButton.style.display = "none";
+
+                forgotOtpInput.focus();
+
+            } else {
+
+                const errorMessage = forgotServerMessage(
+                    result,
+                    "Unable to send OTP."
+                );
+
+                forgotShowMessage(errorMessage, "error");
+
+                forgotSendOtpButton.disabled = false;
+                forgotSendOtpButton.textContent =
+                    "Send OTP on WhatsApp";
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            forgotShowMessage(
+                "Unable to connect to the server.",
+                "error"
+            );
+
+            forgotSendOtpButton.disabled = false;
+            forgotSendOtpButton.textContent =
+                "Send OTP on WhatsApp";
+        }
+    });
+
+    forgotResendButton.addEventListener("click", async function () {
+
+        clearAllForgotErrors();
+        forgotShowMessage("", "");
+
+        const mobile = forgotMobileInput.value.trim();
+
+        if (!mobile) {
+            forgotMobileInput.readOnly = false;
+            forgotSendOtpButton.style.display = "block";
+            forgotSendOtpButton.disabled = false;
+            forgotSendOtpButton.textContent = "Send OTP on WhatsApp";
+
+            setFieldError(
+                forgotMobileInput,
+                "WhatsApp mobile number is required."
+            );
+
+            forgotMobileInput.focus();
+            return;
+        }
+
+        forgotResendButton.disabled = true;
+        forgotResendButton.textContent = "Sending...";
+
+        try {
+
+            const response = await fetch(
+                "/api/method/custom_login.api.whatsapp_signup.send_forgot_password_otp",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        mobile: mobile
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (
+                response.ok &&
+                result.message &&
+                result.message.success
+            ) {
+
+                forgotShowMessage(
+                    "A new OTP has been sent to your WhatsApp.",
+                    "success"
+                );
+
+                forgotOtpInput.value = "";
+                forgotOtpInput.focus();
+
+            } else {
+
+                forgotShowMessage(
+                    forgotServerMessage(
+                        result,
+                        "Unable to resend OTP."
+                    ),
+                    "error"
+                );
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            forgotShowMessage(
+                "Unable to connect to the server.",
+                "error"
+            );
+
+        } finally {
+
+            forgotResendButton.disabled = false;
+            forgotResendButton.textContent = "Resend OTP";
+        }
+    });
+
+    forgotResetButton.addEventListener("click", async function () {
+
+        clearAllForgotErrors();
+        forgotShowMessage("", "");
+
+        const mobile = forgotMobileInput.value.trim();
+        const otp = forgotOtpInput.value.trim();
+        const password = forgotPasswordInput.value;
+        const confirmPassword = forgotConfirmPasswordInput.value;
+
+        let firstInvalid = null;
+
+        if (!otp) {
+            setFieldError(
+                forgotOtpInput,
+                "Verification code is required."
+            );
+            firstInvalid = firstInvalid || forgotOtpInput;
+        } else if (!/^\d{6}$/.test(otp)) {
+            setFieldError(
+                forgotOtpInput,
+                "Enter the 6-digit OTP."
+            );
+            firstInvalid = firstInvalid || forgotOtpInput;
+        }
+
+        if (!password) {
+            setFieldError(
+                forgotPasswordInput,
+                "New password is required."
+            );
+            firstInvalid = firstInvalid || forgotPasswordInput;
+        } else if (password.length < 8) {
+            setFieldError(
+                forgotPasswordInput,
+                "Password must contain at least 8 characters."
+            );
+            firstInvalid = firstInvalid || forgotPasswordInput;
+        }
+
+        if (!confirmPassword) {
+            setFieldError(
+                forgotConfirmPasswordInput,
+                "Please confirm your new password."
+            );
+            firstInvalid = firstInvalid || forgotConfirmPasswordInput;
+        } else if (password !== confirmPassword) {
+            setFieldError(
+                forgotConfirmPasswordInput,
+                "Passwords do not match."
+            );
+            firstInvalid = firstInvalid || forgotConfirmPasswordInput;
+        }
+
+        if (firstInvalid) {
+            firstInvalid.focus();
+            return;
+        }
+
+        forgotResetButton.disabled = true;
+        forgotResetButton.textContent = "Resetting Password...";
+
+        try {
+
+            const response = await fetch(
+                "/api/method/custom_login.api.whatsapp_signup.reset_password_with_otp",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        mobile: mobile,
+                        otp: otp,
+                        new_password: password,
+                        confirm_password: confirmPassword
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (
+                response.ok &&
+                result.message &&
+                result.message.success
+            ) {
+
+                forgotShowMessage(
+                    "Password reset successfully. Redirecting to login...",
+                    "success"
+                );
+
+                setTimeout(function () {
+                    window.location.hash = "login";
+                    window.location.reload();
+                }, 1200);
+
+            } else {
+
+                const errorMessage = forgotServerMessage(
+                    result,
+                    "Unable to reset password."
+                );
+
+                if (/otp/i.test(errorMessage)) {
+                    setFieldError(forgotOtpInput, errorMessage);
+                    forgotOtpInput.focus();
+                } else if (/password/i.test(errorMessage)) {
+                    setFieldError(forgotPasswordInput, errorMessage);
+                    forgotPasswordInput.focus();
+                } else {
+                    forgotShowMessage(errorMessage, "error");
+                }
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            forgotShowMessage(
+                "Unable to connect to the server.",
+                "error"
+            );
+
+        } finally {
+
+            forgotResetButton.disabled = false;
+            forgotResetButton.textContent =
+                "Verify OTP & Reset Password";
+        }
+    });
+
+    showEmailForgot();
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const emailButton = document.getElementById("signup-email-btn");
+    const whatsappButton = document.getElementById("signup-whatsapp-btn");
+
+    const emailSection = document.getElementById("signup-email-section");
+    const whatsappSection = document.getElementById("signup-whatsapp-section");
+
+    const whatsappForm = document.getElementById("whatsapp-signup-form");
+    const mobileInput = document.getElementById("whatsapp_signup_mobile");
+    const sendOtpButton = document.getElementById("whatsapp-send-otp");
+    const otpGroup = document.getElementById("whatsapp-otp-group");
+    const otpInput = document.getElementById("whatsapp_signup_otp");
+    const verifyOtpButton = document.getElementById("whatsapp-verify-otp");
+    const resendOtpButton = document.getElementById("whatsapp-resend-otp");
+    const messageBox = document.getElementById("whatsapp-signup-message");
+
+    const firstNameInput = document.getElementById("whatsapp_signup_first_name");
+    const lastNameInput = document.getElementById("whatsapp_signup_last_name");
+    const emailInput = document.getElementById("whatsapp_signup_email");
+    const passwordInput = document.getElementById("whatsapp_signup_password");
+
+    if (!emailButton || !whatsappButton || !whatsappForm) {
+        return;
+    }
+
+    function clearFieldError(input) {
+        if (!input) return;
+
+        input.classList.remove("field-invalid");
+
+        const error = document.getElementById("error-" + input.id);
+
+        if (error) {
+            error.textContent = "";
+            error.classList.remove("show");
+        }
+    }
+
+    function setFieldError(input, message) {
+        if (!input) return;
+
+        input.classList.add("field-invalid");
+
+        const error = document.getElementById("error-" + input.id);
+
+        if (error) {
+            error.textContent = message;
+            error.classList.add("show");
+        }
+    }
+
+    function clearAllSignupErrors() {
+        [
+            mobileInput,
+            firstNameInput,
+            lastNameInput,
+            emailInput,
+            passwordInput,
+            otpInput
+        ].forEach(clearFieldError);
+    }
+
+    function showMessage(message, type) {
+        messageBox.textContent = message || "";
+        messageBox.className =
+            "whatsapp-signup-message " + (type || "");
+    }
+
+    function cleanServerMessage(message) {
+        if (!message) return "";
+
+        const holder = document.createElement("div");
+        holder.innerHTML = String(message);
+
+        return (holder.textContent || holder.innerText || "")
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    function getServerMessage(result, fallback) {
+        let message = "";
+
+        if (result && result.message) {
+            if (typeof result.message === "string") {
+                message = result.message;
+            } else if (result.message.message) {
+                message = result.message.message;
+            }
+        }
+
+        if (!message && result && result._server_messages) {
+            try {
+                const messages = JSON.parse(result._server_messages);
+
+                if (messages.length) {
+                    const parsed = JSON.parse(messages[0]);
+
+                    if (parsed.message) {
+                        message = parsed.message;
+                    }
+                }
+            } catch (e) {
+                console.error("Unable to parse server message", e);
+            }
+        }
+
+        return cleanServerMessage(message) || fallback;
+    }
+
+    function showEmailSignup() {
+        emailButton.classList.add("active");
+        whatsappButton.classList.remove("active");
+
+        emailSection.style.display = "block";
+        whatsappSection.style.display = "none";
+    }
+
+    function showWhatsappSignup() {
+        whatsappButton.classList.add("active");
+        emailButton.classList.remove("active");
+
+        emailSection.style.display = "none";
+        whatsappSection.style.display = "block";
+    }
+
+    emailButton.addEventListener("click", showEmailSignup);
+    whatsappButton.addEventListener("click", showWhatsappSignup);
+
+    mobileInput.addEventListener("input", function () {
+        clearFieldError(mobileInput);
+        this.value = this.value.replace(/[^\d+]/g, "");
+    });
+
+    firstNameInput.addEventListener("input", function () {
+        clearFieldError(firstNameInput);
+    });
+
+    lastNameInput.addEventListener("input", function () {
+        clearFieldError(lastNameInput);
+    });
+
+    emailInput.addEventListener("input", function () {
+        clearFieldError(emailInput);
+    });
+
+    passwordInput.addEventListener("input", function () {
+        clearFieldError(passwordInput);
+    });
+
+    otpInput.addEventListener("input", function () {
+        clearFieldError(otpInput);
+        this.value = this.value.replace(/\D/g, "").slice(0, 6);
+    });
+
+    whatsappForm.addEventListener("submit", async function (event) {
+
+        event.preventDefault();
+
+        clearAllSignupErrors();
+        showMessage("", "");
+
+        const mobile = mobileInput.value.trim();
+
+        if (!mobile) {
+            setFieldError(
+                mobileInput,
+                "WhatsApp mobile number is required."
+            );
+            mobileInput.focus();
+            return;
+        }
+
+        const digits = mobile.replace(/\D/g, "");
+
+        if (digits.length < 10 || digits.length > 15) {
+            setFieldError(
+                mobileInput,
+                "Enter a valid mobile number with country code."
+            );
+            mobileInput.focus();
+            return;
+        }
+
+        sendOtpButton.disabled = true;
+        sendOtpButton.textContent = "Sending OTP...";
+
+        try {
+
+            const response = await fetch(
+                "/api/method/custom_login.api.whatsapp_signup.send_otp",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        mobile: mobile
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (
+                response.ok &&
+                result.message &&
+                result.message.success
+            ) {
+
+                showMessage(
+                    "OTP sent successfully to your WhatsApp.",
+                    "success"
+                );
+
+                otpGroup.style.display = "block";
+                mobileInput.readOnly = true;
+                sendOtpButton.style.display = "none";
+
+                otpInput.focus();
+
+            } else {
+
+                const errorMessage = getServerMessage(
+                    result,
+                    "Unable to send OTP."
+                );
+
+                if (/account already exists|already exists|mobile/i.test(errorMessage)) {
+                    setFieldError(mobileInput, errorMessage);
+                    mobileInput.focus();
+                } else {
+                    showMessage(errorMessage, "error");
+                }
+
+                sendOtpButton.disabled = false;
+                sendOtpButton.textContent = "Send OTP on WhatsApp";
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            showMessage(
+                "Unable to connect to the server.",
+                "error"
+            );
+
+            sendOtpButton.disabled = false;
+            sendOtpButton.textContent = "Send OTP on WhatsApp";
+        }
+    });
+
+    resendOtpButton.addEventListener("click", async function () {
+
+        clearFieldError(mobileInput);
+        showMessage("", "");
+
+        const mobile = mobileInput.value.trim();
+
+        if (!mobile) {
+            mobileInput.readOnly = false;
+            sendOtpButton.style.display = "block";
+            sendOtpButton.disabled = false;
+            sendOtpButton.textContent = "Send OTP on WhatsApp";
+
+            setFieldError(
+                mobileInput,
+                "WhatsApp mobile number is required."
+            );
+
+            mobileInput.focus();
+            return;
+        }
+
+        resendOtpButton.disabled = true;
+        resendOtpButton.textContent = "Sending...";
+
+        try {
+
+            const response = await fetch(
+                "/api/method/custom_login.api.whatsapp_signup.send_otp",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        mobile: mobile
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (
+                response.ok &&
+                result.message &&
+                result.message.success
+            ) {
+
+                showMessage(
+                    "A new OTP has been sent to your WhatsApp.",
+                    "success"
+                );
+
+                otpInput.value = "";
+                otpInput.focus();
+
+            } else {
+
+                const errorMessage = getServerMessage(
+                    result,
+                    "Unable to resend OTP."
+                );
+
+                if (/account already exists|already exists|mobile/i.test(errorMessage)) {
+                    setFieldError(mobileInput, errorMessage);
+                    mobileInput.focus();
+                } else {
+                    showMessage(errorMessage, "error");
+                }
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            showMessage(
+                "Unable to connect to the server.",
+                "error"
+            );
+
+        } finally {
+
+            resendOtpButton.disabled = false;
+            resendOtpButton.textContent = "Resend OTP";
+        }
+    });
+
+    verifyOtpButton.addEventListener("click", async function () {
+
+        clearAllSignupErrors();
+        showMessage("", "");
+
+        const mobile = mobileInput.value.trim();
+        const otp = otpInput.value.trim();
+        const firstName = firstNameInput.value.trim();
+        const lastName = lastNameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        let firstInvalid = null;
+
+        if (!firstName) {
+            setFieldError(
+                firstNameInput,
+                "First Name is required."
+            );
+            firstInvalid = firstInvalid || firstNameInput;
+        }
+
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            setFieldError(
+                emailInput,
+                "Enter a valid email address."
+            );
+            firstInvalid = firstInvalid || emailInput;
+        }
+
+        if (!password) {
+            setFieldError(
+                passwordInput,
+                "Password is required."
+            );
+            firstInvalid = firstInvalid || passwordInput;
+        } else if (password.length < 8) {
+            setFieldError(
+                passwordInput,
+                "Password must contain at least 8 characters."
+            );
+            firstInvalid = firstInvalid || passwordInput;
+        }
+
+        if (!otp) {
+            setFieldError(
+                otpInput,
+                "Verification code is required."
+            );
+            firstInvalid = firstInvalid || otpInput;
+        } else if (!/^\d{6}$/.test(otp)) {
+            setFieldError(
+                otpInput,
+                "Enter the 6-digit OTP."
+            );
+            firstInvalid = firstInvalid || otpInput;
+        }
+
+        if (firstInvalid) {
+            firstInvalid.focus();
+            return;
+        }
+
+        verifyOtpButton.disabled = true;
+        verifyOtpButton.textContent = "Creating Account...";
+
+        try {
+
+            const response = await fetch(
+                "/api/method/custom_login.api.whatsapp_signup.verify_otp",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    credentials: "same-origin",
+                    body: JSON.stringify({
+                        mobile: mobile,
+                        otp: otp,
+                        first_name: firstName,
+                        last_name: lastName,
+                        email: email,
+                        password: password
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (
+                response.ok &&
+                result.message &&
+                result.message.success
+            ) {
+
+                showMessage(
+                    "Account created successfully. Redirecting...",
+                    "success"
+                );
+
+                if (result.message.redirect) {
+                    window.location.href = result.message.redirect;
+                } else {
+                    window.location.href = "/app";
+                }
+
+            } else {
+
+                const errorMessage = getServerMessage(
+                    result,
+                    "Unable to verify OTP or create the account."
+                );
+
+                if (/otp|verification/i.test(errorMessage)) {
+                    setFieldError(otpInput, errorMessage);
+                    otpInput.focus();
+                } else if (/email/i.test(errorMessage)) {
+                    setFieldError(emailInput, errorMessage);
+                    emailInput.focus();
+                } else if (/password/i.test(errorMessage)) {
+                    setFieldError(passwordInput, errorMessage);
+                    passwordInput.focus();
+                } else if (/mobile|account already exists|already exists/i.test(errorMessage)) {
+                    setFieldError(mobileInput, errorMessage);
+                    mobileInput.focus();
+                } else {
+                    showMessage(errorMessage, "error");
+                }
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            showMessage(
+                "Unable to connect to the server.",
+                "error"
+            );
+
+        } finally {
+
+            verifyOtpButton.disabled = false;
+            verifyOtpButton.textContent = "Verify OTP & Create Account";
+        }
+    });
+
+    showEmailSignup();
+
+});
 </script>
 
 {% endblock %}
